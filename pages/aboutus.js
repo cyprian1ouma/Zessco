@@ -216,7 +216,7 @@ export default function About() {
 
             <div className="mt-12 text-center">
               <p className="text-lg text-gray-800 italic max-w-2xl mx-auto">
-                “Looking back, we’re proud of how far we’ve come. Looking ahead, we’re excited to go even further with our clients, partners, and communities.”
+                &ldquo;Looking back, we&rsquo;re proud of how far we&rsquo;ve come. Looking ahead, we&rsquo;re excited to go even further with our clients, partners, and communities.&rdquo;
               </p>
             </div>
           </section>
