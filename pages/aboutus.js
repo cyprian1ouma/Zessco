@@ -59,7 +59,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Mission Section with image1.png */}
+        {/* Mission Section */}
         <section className="grid md:grid-cols-2 gap-10 items-center px-6 py-12 max-w-7xl mx-auto">
           <div className="grid sm:grid-cols-1 gap-6">
             <Image
@@ -78,7 +78,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Vision Section with image1.png */}
+        {/* Vision Section */}
         <section className="grid md:grid-cols-2 gap-10 items-center px-6 py-12 max-w-7xl mx-auto">
           <div>
             <h2 className="text-3xl font-bold text-blue-800 mb-4">Our Vision</h2>
@@ -110,7 +110,9 @@ export default function About() {
           />
           <div className="z-10 max-w-3xl">
             <h2 className="text-3xl font-bold mb-4">What Our Customers Say</h2>
-            <p className="text-xl italic">"{testimonials[currentTestimonial].comment}"</p>
+            <p className="text-xl italic">
+              &ldquo;{testimonials[currentTestimonial].comment}&rdquo;
+            </p>
             <p className="mt-4 font-semibold">- {testimonials[currentTestimonial].name}</p>
           </div>
         </section>
@@ -141,28 +143,16 @@ export default function About() {
                 <div className="p-4 bg-white text-center">
                   <h3 className="text-lg font-bold text-blue-900">{name}</h3>
                   <div className="flex justify-center gap-4 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <a
-                      href="#"
-                      className="text-blue-600 hover:scale-125 transition-transform"
-                    >
+                    <a href="#" className="text-blue-600 hover:scale-125 transition-transform">
                       <FaFacebook />
                     </a>
-                    <a
-                      href="#"
-                      className="text-pink-500 hover:scale-125 transition-transform"
-                    >
+                    <a href="#" className="text-pink-500 hover:scale-125 transition-transform">
                       <FaInstagram />
                     </a>
-                    <a
-                      href="#"
-                      className="text-sky-500 hover:scale-125 transition-transform"
-                    >
+                    <a href="#" className="text-sky-500 hover:scale-125 transition-transform">
                       <FaXTwitter />
                     </a>
-                    <a
-                      href="#"
-                      className="text-blue-700 hover:scale-125 transition-transform"
-                    >
+                    <a href="#" className="text-blue-700 hover:scale-125 transition-transform">
                       <FaLinkedin />
                     </a>
                   </div>
@@ -170,48 +160,27 @@ export default function About() {
               </div>
             ))}
           </div>
-          {/* our history */}
 
-
+          {/* Our History */}
           <section className="bg-white py-16 pt-4 px-6 max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-blue-800 mb-12">Our History</h2>
             <div className="space-y-10 border-l-4 border-blue-200 pl-6">
-              <div>
-                <h3 className="text-xl font-bold text-blue-700">2017</h3>
-                <p className="text-gray-700">Zessco was founded in Nairobi with a vision to streamline logistics in Kenya through technology and dedication to service.</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-blue-700">2018</h3>
-                <p className="text-gray-700">Secured first major logistics contract and expanded operations to Mombasa and Kisumu.</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-blue-700">2019</h3>
-                <p className="text-gray-700">Launched a digital fleet tracking system, improving delivery efficiency and customer confidence.</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-blue-700">2020</h3>
-                <p className="text-gray-700">Adapted quickly to COVID-19 challenges by introducing contactless delivery and health-safe protocols.</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-blue-700">2021</h3>
-                <p className="text-gray-700">Opened a new logistics hub in Eldoret and doubled our vehicle fleet to meet growing demand.</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-blue-700">2022</h3>
-                <p className="text-gray-700">Partnered with regional firms to launch cross-border deliveries in East Africa.</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-blue-700">2023</h3>
-                <p className="text-gray-700">Introduced green logistics solutions, focusing on sustainability and eco-friendly transport options.</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-blue-700">2024</h3>
-                <p className="text-gray-700">Digitized tender processing and implemented AI-powered scheduling for optimized route planning.</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-blue-700">2025</h3>
-                <p className="text-gray-700">Now serving all 47 counties of Kenya with plans to launch a pan-African logistics network by 2026.</p>
-              </div>
+              {[
+                { year: '2017', desc: 'Zessco was founded in Nairobi with a vision to streamline logistics in Kenya through technology and dedication to service.' },
+                { year: '2018', desc: 'Secured first major logistics contract and expanded operations to Mombasa and Kisumu.' },
+                { year: '2019', desc: 'Launched a digital fleet tracking system, improving delivery efficiency and customer confidence.' },
+                { year: '2020', desc: 'Adapted quickly to COVID-19 challenges by introducing contactless delivery and health-safe protocols.' },
+                { year: '2021', desc: 'Opened a new logistics hub in Eldoret and doubled our vehicle fleet to meet growing demand.' },
+                { year: '2022', desc: 'Partnered with regional firms to launch cross-border deliveries in East Africa.' },
+                { year: '2023', desc: 'Introduced green logistics solutions, focusing on sustainability and eco-friendly transport options.' },
+                { year: '2024', desc: 'Digitized tender processing and implemented AI-powered scheduling for optimized route planning.' },
+                { year: '2025', desc: 'Now serving all 47 counties of Kenya with plans to launch a pan-African logistics network by 2026.' }
+              ].map((event, idx) => (
+                <div key={idx}>
+                  <h3 className="text-xl font-bold text-blue-700">{event.year}</h3>
+                  <p className="text-gray-700">{event.desc}</p>
+                </div>
+              ))}
             </div>
 
             <div className="mt-12 text-center">
@@ -220,11 +189,9 @@ export default function About() {
               </p>
             </div>
           </section>
-
         </section>
-
       </main>
       <Footer />
     </>
-  )
+  );
 }
