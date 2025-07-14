@@ -1,3 +1,4 @@
+import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useEffect, useState } from 'react';
@@ -6,33 +7,33 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from 'react-icons/
 export default function Contact() {
   const tenders = [
     {
-      title: "Tender Documentation",
-      description: "Preparation of high-quality, fully compliant tender documents tailored to each opportunity."
+      title: 'Tender Documentation',
+      description: 'Preparation of high-quality, fully compliant tender documents tailored to each opportunity.',
     },
     {
-      title: "Client Compliance Management",
-      description: "We ensure our clients are always up-to-date with all legal, financial, and regulatory requirements."
+      title: 'Client Compliance Management',
+      description: 'We ensure our clients are always up-to-date with all legal, financial, and regulatory requirements.',
     },
     {
-      title: "Document Updating & Secretarial Services",
-      description: "We handle company updates, renewals, and act as your outsourced corporate secretariat."
+      title: 'Document Updating & Secretarial Services',
+      description: 'We handle company updates, renewals, and act as your outsourced corporate secretariat.',
     },
     {
-      title: "Tender Winning Support",
-      description: "Beyond paperwork, we strategize with you to give your application the best possible winning chance."
+      title: 'Tender Winning Support',
+      description: 'Beyond paperwork, we strategize with you to give your application the best possible winning chance.',
     },
     {
-      title: "Company Transactions",
-      description: "We assist in buying, selling, and leasing companies — with or without past experience — legally and ethically."
+      title: 'Company Transactions',
+      description: 'We assist in buying, selling, and leasing companies — with or without past experience — legally and ethically.',
     },
     {
-      title: "Regulatory Compliance Assistance",
-      description: "We ensure compliance with KRA, NCA, and all other relevant regulatory authorities."
+      title: 'Regulatory Compliance Assistance',
+      description: 'We ensure compliance with KRA, NCA, and all other relevant regulatory authorities.',
     },
     {
-      title: "Company Profile Preparation",
-      description: "We prepare compelling, professional company profiles that give you a competitive edge in tendering."
-    }
+      title: 'Company Profile Preparation',
+      description: 'We prepare compelling, professional company profiles that give you a competitive edge in tendering.',
+    },
   ];
 
   const [currentTender, setCurrentTender] = useState(0);
@@ -42,7 +43,12 @@ export default function Contact() {
       setCurrentTender((prev) => (prev + 1) % tenders.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [tenders.length]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Form submission logic would go here
+  };
 
   return (
     <>
@@ -57,7 +63,7 @@ export default function Contact() {
             loading="lazy"
             title="Zessco Location"
             referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          />
         </div>
 
         {/* Contact Info & Form */}
@@ -83,17 +89,17 @@ export default function Contact() {
 
             {/* Social Icons */}
             <div className="flex gap-4 mt-6">
-              <a href="#" aria-label="Facebook" className="text-blue-600 hover:scale-110 transition text-xl"><FaFacebookF /></a>
-              <a href="#" aria-label="Instagram" className="text-pink-500 hover:scale-110 transition text-xl"><FaInstagram /></a>
-              <a href="#" aria-label="LinkedIn" className="text-blue-800 hover:scale-110 transition text-xl"><FaLinkedinIn /></a>
-              <a href="#" aria-label="Twitter" className="text-black hover:scale-110 transition text-xl"><FaXTwitter /></a>
+              <a href="https://facebook.com" aria-label="Facebook" className="text-blue-600 hover:scale-110 transition text-xl"><FaFacebookF /></a>
+              <a href="https://instagram.com" aria-label="Instagram" className="text-pink-500 hover:scale-110 transition text-xl"><FaInstagram /></a>
+              <a href="https://linkedin.com" aria-label="LinkedIn" className="text-blue-800 hover:scale-110 transition text-xl"><FaLinkedinIn /></a>
+              <a href="https://twitter.com" aria-label="Twitter" className="text-black hover:scale-110 transition text-xl"><FaXTwitter /></a>
             </div>
           </div>
 
           {/* Form */}
           <div>
             <h2 className="text-4xl font-bold text-blue-900 mb-4">Get in Touch with Us</h2>
-            <form className="bg-white p-6 rounded-lg shadow-md space-y-4">
+            <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md space-y-4">
               <div className="grid md:grid-cols-2 gap-4">
                 <input type="text" name="name" placeholder="Your Name" required className="border p-3 rounded w-full" />
                 <input type="email" name="email" placeholder="Your Email" required className="border p-3 rounded w-full" />
@@ -101,12 +107,12 @@ export default function Contact() {
               <div className="grid md:grid-cols-2 gap-4">
                 <input type="text" name="phone" placeholder="Phone Number" className="border p-3 rounded w-full" />
                 <select name="service" className="border p-3 rounded w-full">
-                  {tenders.map((tender, index) => (
-                    <option key={index} value={tender.title}>{tender.title}</option>
+                  {tenders.map((tender) => (
+                    <option key={tender.title} value={tender.title}>{tender.title}</option>
                   ))}
                 </select>
               </div>
-              <textarea name="message" placeholder="Your Message" rows="4" className="border p-3 rounded w-full"></textarea>
+              <textarea name="message" placeholder="Your Message" rows="4" className="border p-3 rounded w-full" />
               <button
                 type="submit"
                 className="bg-blue-700 text-white py-3 px-6 rounded hover:bg-blue-800 transition"
@@ -119,19 +125,19 @@ export default function Contact() {
 
         {/* Animated Tenders */}
         <div className="relative text-center mt-16 h-[40vh] flex flex-col justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-blue-50 backdrop-blur-sm z-0"></div>
+          <div className="absolute inset-0 bg-blue-50 backdrop-blur-sm z-0" />
           
           <div className="relative z-10">
             <h3 className="text-xl font-bold text-blue-800 mb-4">We Offer</h3>
             <div className="max-w-4xl mx-auto">
-              <p className="text-lg text-gray-800 font-medium animate-bounce-in">
-                <span className="block font-bold text-blue-700 text-2">
+              <div className="text-lg text-gray-800 font-medium">
+                <span className="block font-bold text-blue-700 text-2xl">
                   {tenders[currentTender].title}
                 </span>
                 <span className="block text-xl text-gray-600 mt-1">
                   {tenders[currentTender].description}
                 </span>
-              </p>
+              </div>
             </div>
           </div>
         </div>

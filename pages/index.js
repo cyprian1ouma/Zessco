@@ -21,7 +21,7 @@ export default function Home() {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <>
@@ -56,7 +56,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Info Boxes Section - Kept as is */}
+        {/* Info Boxes Section */}
         <section className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto py-12 text-center">
           <div className="bg-white shadow-md p-6 rounded transition duration-500 hover:bg-orange-500 hover:text-white hover:scale-105 text-lg font-semibold">
             Open at 8:00am <br />Close at 9:00pm
@@ -84,7 +84,7 @@ export default function Home() {
             The #1 Tender Documentation Experts in Kenya
           </h2>
           <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
-            Over 1,000 successful clients. Our team of engineers, auditors, advocates, and technical experts prepares winning tenders — even under tight timelines.
+            Over 1,000 successful clients. Our team of engineers, auditors, advocates, and technical experts prepares winning tenders &mdash; even under tight timelines.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/tender" className="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition font-semibold">
@@ -104,11 +104,11 @@ export default function Home() {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                "🚀 We Deliver Under Pressure – Quality documentation even in 48 hours",
-                "👨🏫 Experts Under One Roof – Engineers, advocates, auditors, procurement pros",
-                "📦 Complete Documentation Package – Technical, legal, financial, formatting",
-                "📊 After-Submission Support – KRA compliance, tender alerts, feedback",
-                "🤝 We Guide First-Timers – You don't need to be ready. We prepare you."
+                "🚀 We Deliver Under Pressure &mdash; Quality documentation even in 48 hours",
+                "👨🏫 Experts Under One Roof &mdash; Engineers, advocates, auditors, procurement pros",
+                "📦 Complete Documentation Package &mdash; Technical, legal, financial, formatting",
+                "📊 After-Submission Support &mdash; KRA compliance, tender alerts, feedback",
+                "🤝 We Guide First-Timers &mdash; You don&apos;t need to be ready. We prepare you."
               ].map((item, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
                   <p className="text-lg">{item}</p>
@@ -116,8 +116,8 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-12 bg-white p-6 rounded-lg shadow-md max-w-3xl mx-auto text-center italic">
-              <p className="text-xl">"Zessco made the process easy — and I won my first tender."</p>
-              <p className="mt-2 font-semibold">– Jane M., Kisii</p>
+              <p className="text-xl">&ldquo;Zessco made the process easy &mdash; and I won my first tender.&rdquo;</p>
+              <p className="mt-2 font-semibold">&ndash; Jane M., Kisii</p>
             </div>
           </div>
         </section>
@@ -131,10 +131,10 @@ export default function Home() {
             {[
               "✅ Tender Documentation",
               "🛠️ Technical Input (Engineering/Specs)",
-              "⚖️ Legal Review & Compliance (Advocates)",
-              "📊 Financial Audits & Statements (CPA Auditors)",
+              "⚖️ Legal Review &amp; Compliance (Advocates)",
+              "📊 Financial Audits &amp; Statements (CPA Auditors)",
               "📄 Formatting to Tender Standards",
-              "🚚 Tender Submission & Delivery Support",
+              "🚚 Tender Submission &amp; Delivery Support",
               "🔁 Aftercare: KRA, Trend Updates, Feedback"
             ].map((service, index) => (
               <div key={index} className="border border-blue-200 rounded-lg p-4 hover:bg-blue-50 transition">
@@ -153,17 +153,17 @@ export default function Home() {
         <section className="bg-gray-100 py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-blue-900 text-center mb-12">
-              New or Experienced — We've Got You
+              New or Experienced &mdash; We&apos;ve Got You
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
                   title: "First-Time Applicants",
-                  desc: "We help you qualify & guide you step-by-step"
+                  desc: "We help you qualify &amp; guide you step-by-step"
                 },
                 {
                   title: "Growing SMEs",
-                  desc: "Upgrade your documentation & win bigger contracts"
+                  desc: "Upgrade your documentation &amp; win bigger contracts"
                 },
                 {
                   title: "Established Firms",
@@ -171,7 +171,7 @@ export default function Home() {
                 },
                 {
                   title: "Specialists/Subcontractors",
-                  desc: "Technical documents & partnership support"
+                  desc: "Technical documents &amp; partnership support"
                 }
               ].map((item, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
@@ -190,11 +190,11 @@ export default function Home() {
           </h2>
           <div className="space-y-8 max-w-3xl mx-auto">
             {[
-              " 📞 Free Consultation",
-              " � Assign Expert Team Based on Tender",
-              " 📝 Prepare Full Documentation",
-              " 📬 Submit or Deliver Your Tender",
-              " 🔁 Post-Submission Support"
+              "📞 Free Consultation",
+              "👥 Assign Expert Team Based on Tender",
+              "📝 Prepare Full Documentation",
+              "📬 Submit or Deliver Your Tender",
+              "🔄 Post-Submission Support"
             ].map((step, index) => (
               <div key={index} className="flex items-start gap-4">
                 <div className="bg-blue-100 text-blue-900 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
@@ -205,7 +205,7 @@ export default function Home() {
             ))}
           </div>
           <p className="text-center mt-8 text-gray-600 italic">
-            Even if you're unsure, we review and guide you.
+            Even if you&apos;re unsure, we review and guide you.
           </p>
         </section>
 
@@ -213,17 +213,17 @@ export default function Home() {
         <section className="bg-blue-900 text-white py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">
-              1,000+ Winning Clients — Here's a Few
+              1,000+ Winning Clients &mdash; Here&apos;s a Few
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                "Zessco helped me win a 5M KEMSA supply contract. They worked fast and professionally. – Susan M., Nairobi",
-                "I was late and stressed. Zessco got my tender ready in 2 days. I was shortlisted. – Brian O., Nakuru",
-                "From zero documents to submission in 3 days — and I WON. Thank you Zessco. – Kevin T., Eldoret"
+                "Zessco helped me win a 5M KEMSA supply contract. They worked fast and professionally. &ndash; Susan M., Nairobi",
+                "I was late and stressed. Zessco got my tender ready in 2 days. I was shortlisted. &ndash; Brian O., Nakuru",
+                "From zero documents to submission in 3 days &mdash; and I WON. Thank you Zessco. &ndash; Kevin T., Eldoret"
               ].map((quote, index) => (
                 <div key={index} className="bg-blue-800 p-6 rounded-lg">
-                  <p className="italic">"{quote.split(' – ')[0]}"</p>
-                  <p className="mt-4 font-semibold">– {quote.split(' – ')[1]}</p>
+                  <p className="italic">&ldquo;{quote.split(' &ndash; ')[0]}&rdquo;</p>
+                  <p className="mt-4 font-semibold">&ndash; {quote.split(' &ndash; ')[1]}</p>
                 </div>
               ))}
             </div>
@@ -233,10 +233,10 @@ export default function Home() {
         {/* Final CTA Section */}
         <section className="max-w-6xl mx-auto py-16 px-4 text-center">
           <h2 className="text-3xl font-bold text-blue-900 mb-4">
-            You Don't Have to Be Ready — You Just Need Zessco
+            You Don&apos;t Have to Be Ready &mdash; You Just Need Zessco
           </h2>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            We've helped over 1,000 clients win tenders across Kenya. Whether you're just starting or under pressure, Zessco gives you the expertise, speed, and support to win.
+            We&apos;ve helped over 1,000 clients win tenders across Kenya. Whether you&apos;re just starting or under pressure, Zessco gives you the expertise, speed, and support to win.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/tender" className="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition font-semibold">
@@ -251,17 +251,16 @@ export default function Home() {
           </div>
         </section>
 
-
-        {/* Existing Our Services Section - Kept as is */}
+        {/* Our Services Section */}
         <section className="max-w-7xl mx-auto px-4 py-16">
           <h2 className="text-3xl font-bold text-blue-900 text-center mb-10">Our Services</h2>
           <div className="space-y-10">
             {[
               { service: '1. Tender Documentation', description: 'Preparation of high-quality, fully compliant tender documents tailored to each opportunity.' },
               { service: '2. Client Compliance Management', description: 'We ensure our clients are always up-to-date with all legal, financial, and regulatory requirements.' },
-              { service: '3. Document Updating & Secretarial Services', description: 'We handle company updates, renewals, and act as your outsourced corporate secretariat.' },
+              { service: '3. Document Updating &amp; Secretarial Services', description: 'We handle company updates, renewals, and act as your outsourced corporate secretariat.' },
               { service: '4. Tender Winning Support', description: 'Beyond paperwork, we strategize with you to give your application the best possible winning chance.' },
-              { service: '5. Company Transactions', description: 'We assist in buying, selling, and leasing companies — with or without past experience — legally and ethically.' },
+              { service: '5. Company Transactions', description: 'We assist in buying, selling, and leasing companies &mdash; with or without past experience &mdash; legally and ethically.' },
               { service: '6. Regulatory Compliance Assistance', description: 'We ensure compliance with KRA, NCA, and all other relevant regulatory authorities.' },
               { service: '7. Company Profile Preparation', description: 'We prepare compelling, professional company profiles that give you a competitive edge in tendering.' },
             ].map((item, index) => (
