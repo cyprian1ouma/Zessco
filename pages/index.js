@@ -21,7 +21,7 @@ export default function Home() {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, []); // Removed images.length dependency
 
   return (
     <>
@@ -82,7 +82,7 @@ export default function Home() {
             Win That Tender with Confidence
           </h1>
           <h2 className="text-xl sm:text-2xl text-blue-800 mb-6 sm:mb-8">
-           The #1 Tender Documentation Experts in Kenya
+            The #1 Tender Documentation Experts in Kenya
           </h2>
           <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8 max-w-3xl mx-auto">
             Over 1,000 successful clients. Our team of engineers, auditors, advocates, and technical experts prepares winning tenders — even under tight timelines.
@@ -104,7 +104,7 @@ export default function Home() {
               Why Choose Zessco International?
             </h2>
             <h4 className="text-base sm:text-lg font-medium text-blue-900 text-center mb-8 sm:mb-12 max-w-3xl mx-auto">
-               80% of tenders are disqualified before reaching the financial stage. Our deep technical expertise ensures that your submission checks all the boxes for compliance right from the start.
+              80% of tenders are disqualified before reaching the financial stage. Our deep technical expertise ensures that your submission checks all the boxes for compliance right from the start.
             </h4>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -115,7 +115,7 @@ export default function Home() {
                 },
                 {
                   title: "Powered by Professionals",
-                  text: "Our team isn't just made up of writers — we bring together engineers, legal advisors, procurement specialists, auditors, and graphic designers to create technically sound, visually compelling documents.",
+                  text: "Our team isn&apos;t just made up of writers — we bring together engineers, legal advisors, procurement specialists, auditors, and graphic designers to create technically sound, visually compelling documents.",
                 },
                 {
                   title: "We Stick With You",
@@ -131,7 +131,7 @@ export default function Home() {
                 },
                 {
                   title: "Your Success, Our Priority",
-                  text: "Zessco doesn't just help you apply — we strategize with you, positioning your bids to stand out and win.",
+                  text: "Zessco doesn&apos;t just help you apply — we strategize with you, positioning your bids to stand out and win.",
                 },
               ].map((item, index) => (
                 <div
@@ -148,7 +148,7 @@ export default function Home() {
 
             <div className="mt-8 sm:mt-12 bg-white p-4 sm:p-6 rounded-lg shadow-md max-w-3xl mx-auto text-center italic">
               <p className="text-lg sm:text-xl text-gray-800">
-                "At Zessco, we don't just help you apply — we position you to win."
+                &ldquo;At Zessco, we don&apos;t just help you apply — we position you to win.&rdquo;
               </p>
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function Home() {
         <section className="bg-gray-100 py-12 sm:py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 text-center mb-8 sm:mb-12">
-              New or Experienced — We've Got You
+              New or Experienced — We&apos;ve Got You
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {[
@@ -242,7 +242,7 @@ export default function Home() {
             ))}
           </div>
           <p className="text-center mt-6 sm:mt-8 text-gray-600 italic text-sm sm:text-base">
-            Even if you're unsure, we review and guide you.
+            Even if you&apos;re unsure, we review and guide you.
           </p>
         </section>
 
@@ -250,7 +250,7 @@ export default function Home() {
         <section className="bg-blue-900 text-white py-12 sm:py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
-              1,000+ Winning Clients — Here's a Few
+              1,000+ Winning Clients — Here&apos;s a Few
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               {[
@@ -259,7 +259,7 @@ export default function Home() {
                 "From zero documents to submission in 3 days — and I WON. Thank you Zessco. — Kevin T., Eldoret"
               ].map((quote, index) => (
                 <div key={index} className="bg-blue-800 p-4 sm:p-6 rounded-lg">
-                  <p className="italic text-sm sm:text-base">"{quote.split(' — ')[0]}"</p>
+                  <p className="italic text-sm sm:text-base">&ldquo;{quote.split(' — ')[0]}&rdquo;</p>
                   <p className="mt-3 sm:mt-4 font-semibold text-sm sm:text-base">— {quote.split(' — ')[1]}</p>
                 </div>
               ))}
@@ -270,10 +270,10 @@ export default function Home() {
         {/* Final CTA Section */}
         <section className="max-w-6xl mx-auto py-12 sm:py-16 px-4 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-4">
-            You Don't Have to Be Ready — You Just Need Zessco
+            You Don&apos;t Have to Be Ready — You Just Need Zessco
           </h2>
           <p className="text-base sm:text-xl text-gray-700 mb-6 sm:mb-8 max-w-3xl mx-auto">
-            We've helped over 1,000 clients win tenders across Kenya. Whether you're just starting or under pressure, Zessco gives you the expertise, speed, and support to win.
+            We&apos;ve helped over 1,000 clients win tenders across Kenya. Whether you&apos;re just starting or under pressure, Zessco gives you the expertise, speed, and support to win.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Link href="/tender" className="bg-blue-900 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-blue-800 transition font-semibold text-sm sm:text-base">
@@ -305,10 +305,15 @@ export default function Home() {
                 key={index}
                 className="group grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 items-start transition duration-300"
               >
-                <h2 className="text-lg sm:text-xl font-semibold text-blue-900 p-3 sm:p-4 border rounded-md shadow-sm group-hover:shadow-md group-hover:border-blue-400 group-hover:bg-orange-50 transition duration-500 ease-in-out">
+                <h2 className="text-lg sm:text-xl font-semibold text-blue-900 p-3 sm:p-4 border rounded-md shadow-sm 
+                                group-hover:shadow-md group-hover:border-blue-400 
+                                group-hover:text-2xl group-hover:bg-blue-900 group-hover:text-white
+                                transition-all duration-500 ease-in-out">
                   {item.service}
                 </h2>
-                <p className="text-sm sm:text-base text-gray-700 p-3 sm:p-4 border rounded-md group-hover:bg-orange-50 group-hover:shadow-sm group-hover:border-orange-300 transition duration-500 ease-in-out">
+                <p className="text-sm sm:text-base text-gray-700 p-3 sm:p-4 border rounded-md 
+                            group-hover:bg-orange-50 group-hover:shadow-sm group-hover:border-orange-300 
+                            transition duration-500 ease-in-out">
                   {item.description}
                 </p>
               </div>
