@@ -1,3 +1,4 @@
+// File: pages/aboutus.js
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { FaFacebook, FaInstagram, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
@@ -45,7 +46,7 @@ export default function About() {
     <>
       <Navbar />
       <main className="bg-gray-50 pt-18 pb-20 px-6">
-        {/* Image Slider Section */}
+        {/* Image Slider */}
         <section className="text-center py-10">
           <h1 className="text-4xl font-bold text-blue-900 mb-4">About Us</h1>
           <div className="w-full h-[50vh] relative overflow-hidden">
@@ -59,7 +60,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Who We Are Section */}
+        {/* Who We Are */}
         <section className="max-w-4xl mx-auto py-12 px-6 text-center">
           <h2 className="text-3xl font-bold text-blue-800 mb-6">Who We Are</h2>
           <p className="text-lg text-gray-700 mb-4">
@@ -70,7 +71,7 @@ export default function About() {
           </p>
         </section>
 
-        {/* Mission Section */}
+        {/* Mission */}
         <section className="grid md:grid-cols-2 gap-10 items-center px-6 py-12 max-w-7xl mx-auto">
           <div className="grid sm:grid-cols-1 gap-6">
             <Image
@@ -89,7 +90,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Vision Section */}
+        {/* Vision */}
         <section className="grid md:grid-cols-2 gap-10 items-center px-6 py-12 max-w-7xl mx-auto">
           <div>
             <h2 className="text-3xl font-bold text-blue-800 mb-4">Our Vision</h2>
@@ -108,7 +109,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* What We Do Section */}
+        {/* What We Do */}
         <section className="max-w-7xl mx-auto py-12 px-6 bg-white rounded-lg shadow-sm mb-4">
           <h2 className="text-3xl font-bold text-center text-blue-800 mb-12">What We Do</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -121,7 +122,7 @@ export default function About() {
               <p className="text-gray-700">We ensure our clients are always up-to-date with all legal, financial, and regulatory requirements.</p>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-blue-900 mb-3">3. Document Updating & Secretarial Services</h3>
+              <h3 className="text-xl font-semibold text-blue-900 mb-3">3. Document Updating &amp; Secretarial Services</h3>
               <p className="text-gray-700">We handle company updates, renewals, and act as your outsourced corporate secretariat.</p>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg">
@@ -130,9 +131,7 @@ export default function About() {
             </div>
             <div className="bg-blue-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-blue-900 mb-3">5. Company Transactions</h3>
-              <p className="text-gray-700">
-                We assist in buying, selling, and leasing companies — with or without past experience — legally and ethically.
-              </p>
+              <p className="text-gray-700">We assist in buying, selling, and leasing companies — with or without past experience — legally and ethically.</p>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-blue-900 mb-3">6. Regulatory Compliance Assistance</h3>
@@ -144,27 +143,25 @@ export default function About() {
         {/* Testimonials */}
         <div>
           <h2 className="text-3xl font-bold text-center text-blue-800 mb-12 mt-12 my-6">Customer Testimonials</h2>
-            
-            {/* Testimonial section with image background */}
-            <section className="relative h-[60vh] text-white text-center flex items-center justify-center bg-black">
-              <Image
-                src={testimonials[currentTestimonial].image}
-                layout="fill"
-                objectFit="cover"
-                alt="Customer testimonial"
-                className="absolute inset-0 z-0 opacity-40"
-              />
-              <div className="z-10 max-w-3xl">
-                <h2 className="text-3xl font-bold mb-4">What Our Customers Say</h2>
-                <p className="text-xl italic">
-                  &ldquo;{testimonials[currentTestimonial].comment}&rdquo;
-                </p>
-                <p className="mt-4 font-semibold">- {testimonials[currentTestimonial].name}</p>
-              </div>
-            </section>
+          <section className="relative h-[60vh] text-white text-center flex items-center justify-center bg-black">
+            <Image
+              src={testimonials[currentTestimonial].image}
+              layout="fill"
+              objectFit="cover"
+              alt="Customer testimonial"
+              className="absolute inset-0 z-0 opacity-40"
+            />
+            <div className="z-10 max-w-3xl">
+              <h2 className="text-3xl font-bold mb-4">What Our Customers Say</h2>
+              <p className="text-xl italic">
+                &ldquo;{testimonials[currentTestimonial].comment}&rdquo;
+              </p>
+              <p className="mt-4 font-semibold">- {testimonials[currentTestimonial].name}</p>
+            </div>
+          </section>
         </div>
 
-        {/* Team Section */}
+        {/* Team */}
         <section className="py-12 px-6 max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-blue-800 mb-10">Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -209,7 +206,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Our History */}
+        {/* History */}
         <section className="bg-white py-16 px-6 max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-blue-800 mb-12">Our History</h2>
           <div className="space-y-10 border-l-4 border-blue-200 pl-6">
@@ -233,7 +230,7 @@ export default function About() {
 
           <div className="mt-12 text-center">
             <p className="text-lg text-gray-800 italic max-w-2xl mx-auto">
-              &ldquo;Looking back, we&rsquo;re proud of how far we&rsquo;ve come. Looking ahead, we&rsquo;re excited to go even further with our clients, partners, and communities.&rdquo;
+              &ldquo;Looking back, we&apos;re proud of how far we&apos;ve come. Looking ahead, we&apos;re excited to go even further with our clients, partners, and communities.&rdquo;
             </p>
           </div>
         </section>
