@@ -72,7 +72,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="bg-white shadow-md p-3 sm:p-6 rounded transition duration-500 hover:bg-orange-500 hover:text-white hover:scale-105 text-sm sm:text-lg font-semibold">
-            Call: +254796977092
+            Call: +254 724 210375
           </div>
         </section>
 
@@ -92,7 +92,7 @@ export default function Home() {
               Start My Tender Now
             </Link>
             <Link href="/eligibility" className="bg-orange-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-orange-600 transition font-semibold text-sm sm:text-base">
-              Free Eligibility Check
+              Free View our catalogue
             </Link>
           </div>
         </section>

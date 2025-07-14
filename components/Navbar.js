@@ -30,7 +30,7 @@ export default function Navbar() {
             className="rounded-md"
             priority
           />
-          <span className="text-lg font-bold text-white">Zessco International Consoltancy</span>
+          <span className="text-lg font-bold text-white">Zessco International Consultancy</span>
         </Link>
 
         {/* Hamburger Menu (Mobile) */}

@@ -21,64 +21,64 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-blue-900 text-white text-center text-md-start pt-10 pb-6 px-4 md:px-16">
+    <footer className="bg-blue-900 text-white text-center md:text-left pt-10 pb-6 px-4 md:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Row: Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Company Info */}
-          <div>
-            <h6 className="uppercase font-bold mb-4">Zessco Logistics</h6>
-            <p>
+          <div className="px-2 sm:px-0">
+            <h6 className="uppercase font-bold mb-4 text-lg">Zessco Logistics</h6>
+            <p className="text-sm sm:text-base">
               Organizing your Tender Application with trust and simplicity. Experience
-              seamless freigh and delivery solutions.
-              <span className='uppercase font-bold text-orange-500'> Simple. Complete. Professional.</span>
+              seamless freight and delivery solutions.
+              <span className='uppercase font-bold text-orange-500 block mt-2 text-sm sm:text-base'> Simple. Complete. Professional.</span>
             </p>
           </div>
 
           {/* Products */}
-          <div>
-            <h6 className="uppercase font-bold mb-4">Products</h6>
+          <div className="px-2 sm:px-0">
+            <h6 className="uppercase font-bold mb-4 text-lg">Products</h6>
             <ul className="space-y-2">
-              <li><a className="text-white hover:underline" href="#">Freight Services</a></li>
-              <li><a className="text-white hover:underline" href="#">Smart Tracking</a></li>
-              <li><a className="text-white hover:underline" href="#">Cold Chain</a></li>
-              <li><a className="text-white hover:underline" href="#">Fleet Tools</a></li>
+              <li><a className="text-white hover:underline text-sm sm:text-base" href="#">Freight Services</a></li>
+              <li><a className="text-white hover:underline text-sm sm:text-base" href="#">Smart Tracking</a></li>
+              <li><a className="text-white hover:underline text-sm sm:text-base" href="#">Cold Chain</a></li>
+              <li><a className="text-white hover:underline text-sm sm:text-base" href="#">Fleet Tools</a></li>
             </ul>
           </div>
 
           {/* Useful Links */}
-          <div>
-            <h6 className="uppercase font-bold mb-4">Useful Links</h6>
+          <div className="px-2 sm:px-0">
+            <h6 className="uppercase font-bold mb-4 text-lg">Useful Links</h6>
             <ul className="space-y-2">
-              <li><Link className="text-white hover:underline" href="/">Home</Link></li>
-              <li><Link className="text-white hover:underline" href="/tender">Tender</Link></li>
-              <li><Link className="text-white hover:underline" href="/services">Services</Link></li>
-              <li><Link className="text-white hover:underline" href="/aboutus">About</Link></li>
-              <li><Link className="text-white hover:underline" href="/contact">Contact</Link></li>
+              <li><Link className="text-white hover:underline text-sm sm:text-base" href="/">Home</Link></li>
+              <li><Link className="text-white hover:underline text-sm sm:text-base" href="/tender">Tender</Link></li>
+              <li><Link className="text-white hover:underline text-sm sm:text-base" href="/services">Services</Link></li>
+              <li><Link className="text-white hover:underline text-sm sm:text-base" href="/aboutus">About</Link></li>
+              <li><Link className="text-white hover:underline text-sm sm:text-base" href="/contact">Contact</Link></li>
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h6 className="uppercase font-bold mb-4">Contact</h6>
+          <div className="px-2 sm:px-0">
+            <h6 className="uppercase font-bold mb-4 text-lg">Contact</h6>
             <ul className="space-y-2 text-sm">
-              <li className="flex items-center text-white">
-                <FaHome className="text-lg" />
-                <span className="ml-2">Nairobi, Kenya</span>
+              <li className="flex items-start text-white">
+                <FaHome className="text-lg mt-0.5 flex-shrink-0" />
+                <span className="ml-2 text-sm sm:text-base">Nairobi, Kenya</span>
               </li>
 
-              <li className="flex items-center text-white">
-                <FaChair className="text-lg" />
-                <span className="ml-2">Tumaini House, Opposite Kencom</span>
+              <li className="flex items-start text-white">
+                <FaChair className="text-lg mt-0.5 flex-shrink-0" />
+                <span className="ml-2 text-sm sm:text-base">Tumaini House, Opposite Kencom</span>
               </li>
               
-              <li className="flex items-center text-white">
-                <FaEnvelope className="text-lg" />
-                <span className="ml-2">Email: info@zesscointernational.com</span>
+              <li className="flex items-start text-white">
+                <FaEnvelope className="text-lg mt-0.5 flex-shrink-0" />
+                <span className="ml-2 text-sm sm:text-base">info@zesscointernational.com</span>
               </li>
-              <li className="flex items-center text-white">
-                <FaPhone className="text-lg" />
-                <span className="ml-2">Phone: +254796977092</span>
+              <li className="flex items-start text-white">
+                <FaPhone className="text-lg mt-0.5 flex-shrink-0" />
+                <span className="ml-2 text-sm sm:text-base">+254 724 210375</span>
               </li>
             </ul>
           </div>
@@ -88,11 +88,11 @@ export default function Footer() {
 
         {/* Bottom Row: Copyright + Social */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <div>
+          <div className="order-2 md:order-1 text-sm sm:text-base">
             © {new Date().getFullYear()} Zessco Logistics. All rights reserved.
           </div>
 
-          <div className="flex gap-3 text-white text-lg">
+          <div className="order-1 md:order-2 flex gap-3 text-white text-lg mb-4 md:mb-0">
             <a href="#" className="hover:scale-125 hover:text-green-400 transition duration-300">
               <FaWhatsapp />
             </a>
@@ -115,11 +115,10 @@ export default function Footer() {
       {/* Back to Top Button */}
       <button 
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 bg-orange-500 text-white p-3 rounded-full shadow-lg hover:bg-orange-600 transition duration-20000 z-50 group flex items-center"
+        className="fixed bottom-6 right-6 bg-orange-500 text-white p-3 rounded-full shadow-lg hover:bg-orange-600 transition duration-200 z-50 group flex items-center"
         aria-label="Back to top">
         <FaArrowUp className="text-xl" />
       </button>
-
     </footer>
   )
 }
