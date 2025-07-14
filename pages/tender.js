@@ -143,95 +143,96 @@ export default function TenderPage() {
   return (
     <>
       <Navbar />
-      <main className="bg-gray-50 pt-16 pb-16 px-4">
+      <main className="bg-gray-50 pt-16 pb-16 px-4 sm:px-6">
         {/* Banner */}
-        <div className="w-full h-[40vh] mt-3 overflow-hidden shadow-lg relative">
+        <div className="w-full h-[30vh] sm:h-[40vh] mt-3 overflow-hidden shadow-lg relative">
           <Image
             src="/image1.png"
             alt="Tender banner"
             fill
             className="object-cover"
             priority
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 1200px"
           />
         </div>
 
         {/* Tender Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-10 max-w-7xl mx-auto">
           {tenders.map((t, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl shadow-md p-5 hover:bg-blue-50 transform hover:scale-105 transition-all duration-700"
+              className="bg-white rounded-lg sm:rounded-xl shadow-sm sm:shadow-md p-4 sm:p-5 hover:bg-blue-50 transform hover:scale-[1.02] transition-all duration-300"
             >
-              <h3 className="text-xl font-bold text-blue-900 mb-1">{t.company}</h3>
-              <p className="text-md font-semibold text-gray-700">{t.name}</p>
-              <p className="text-sm text-gray-600 mb-2">{t.description}</p>
-              <p><strong>Tender No:</strong> {t.number}</p>
-              <p className="flex items-center gap-2"><FaCalendarAlt /> <strong>Posted:</strong> {t.posted}</p>
-              <p className="flex items-center gap-2"><FaCalendarAlt /> <strong>Closing:</strong> {t.closing}</p>
-              <p><strong>Contact:</strong> {t.contact}</p>
-              <p><strong>Email:</strong> {t.email}</p>
+              <h3 className="text-lg sm:text-xl font-bold text-blue-900 mb-1">{t.company}</h3>
+              <p className="text-sm sm:text-md font-semibold text-gray-700">{t.name}</p>
+              <p className="text-xs sm:text-sm text-gray-600 mb-2">{t.description}</p>
+              <p className="text-xs sm:text-sm"><strong>Tender No:</strong> {t.number}</p>
+              <p className="flex items-center gap-2 text-xs sm:text-sm"><FaCalendarAlt className="text-xs sm:text-sm" /> <strong>Posted:</strong> {t.posted}</p>
+              <p className="flex items-center gap-2 text-xs sm:text-sm"><FaCalendarAlt className="text-xs sm:text-sm" /> <strong>Closing:</strong> {t.closing}</p>
+              <p className="text-xs sm:text-sm"><strong>Contact:</strong> {t.contact}</p>
+              <p className="text-xs sm:text-sm mb-2"><strong>Email:</strong> {t.email}</p>
               <a
                 href={t.link}
-                className="text-blue-700 font-semibold mt-2 inline-flex items-center gap-2 hover:underline"
+                className="text-blue-700 font-semibold text-xs sm:text-sm mt-2 inline-flex items-center gap-2 hover:underline"
               >
-                <FaDownload /> Download Tender
+                <FaDownload className="text-xs sm:text-sm" /> Download Tender
               </a>
             </div>
           ))}
         </div>
 
         {/* Steps to Apply */}
-        <section className="max-w-7xl mx-auto mt-20 px-4 relative">
-          <h2 className="text-3xl font-bold text-center text-blue-900 mb-14">How to Apply for a Tender</h2>
+        <section className="max-w-7xl mx-auto mt-12 sm:mt-20 px-2 sm:px-4 relative">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-900 mb-8 sm:mb-14">How to Apply for a Tender</h2>
 
           {/* First Row */}
-          <div className="grid sm:grid-cols-3 gap-6 mb-24 relative">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-24 relative">
             {[1, 2, 3].map((step) => (
               <div
                 key={step}
-                className="bg-white border border-gray-200 p-6 rounded shadow hover:shadow-lg transition z-10 relative"
+                className="bg-white border border-gray-200 p-4 sm:p-6 rounded shadow hover:shadow-lg transition z-10 relative"
               >
-                <h3 className="text-xl font-bold text-blue-800 mb-2">Step {step}</h3>
-                <p className="text-sm text-gray-600">Complete this step with accuracy and confidence to proceed smoothly.</p>
+                <h3 className="text-lg sm:text-xl font-bold text-blue-800 mb-2">Step {step}</h3>
+                <p className="text-xs sm:text-sm text-gray-600">Complete this step with accuracy and confidence to proceed smoothly.</p>
               </div>
             ))}
-            <div className="absolute top-[45%] left-[18%] w-[25%] h-0 border-t-2 border-dotted border-blue-700 z-0 animate-move">
+            <div className="hidden sm:block absolute top-[45%] left-[18%] w-[25%] h-0 border-t-2 border-dotted border-blue-700 z-0 animate-move">
               <div className="absolute -right-2 -top-2 rotate-45 w-4 h-4 border-t-4 border-r-4 border-blue-700"></div>
             </div>
-            <div className="absolute top-[45%] left-[52%] w-[25%] h-0 border-t-2 border-dotted border-blue-700 z-0 animate-move">
+            <div className="hidden sm:block absolute top-[45%] left-[52%] w-[25%] h-0 border-t-2 border-dotted border-blue-700 z-0 animate-move">
               <div className="absolute -right-2 -top-2 rotate-45 w-4 h-4 border-t-4 border-r-4 border-blue-700"></div>
             </div>
           </div>
 
           {/* Second Row */}
-          <div className="grid sm:grid-cols-3 gap-6 relative">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 relative">
             {[4, 5].map((step) => (
               <div
                 key={step}
-                className="bg-white border border-gray-200 p-6 rounded shadow hover:shadow-lg transition z-10 relative"
+                className="bg-white border border-gray-200 p-4 sm:p-6 rounded shadow hover:shadow-lg transition z-10 relative"
               >
-                <h3 className="text-xl font-bold text-blue-800 mb-2">Step {step}</h3>
-                <p className="text-sm text-gray-600">Follow this step carefully for the final part of the tender process.</p>
+                <h3 className="text-lg sm:text-xl font-bold text-blue-800 mb-2">Step {step}</h3>
+                <p className="text-xs sm:text-sm text-gray-600">Follow this step carefully for the final part of the tender process.</p>
               </div>
             ))}
-            <div className="bg-green-50 border-4 border-green-600 p-6 rounded-xl shadow-xl z-10 text-center">
-              <h3 className="text-2xl font-bold text-green-900 mb-3">Zessco Makes It Easy</h3>
-              <p className="text-gray-700 mb-4">
+            <div className="bg-green-50 border-2 sm:border-4 border-green-600 p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-lg sm:shadow-xl z-10 text-center">
+              <h3 className="text-xl sm:text-2xl font-bold text-green-900 mb-2 sm:mb-3">Zessco Makes It Easy</h3>
+              <p className="text-xs sm:text-sm text-gray-700 mb-3 sm:mb-4">
                 With Zessco, all these steps are simplified into one seamless system — powered by our expert team.
               </p>
               <Link
                 href="/contact"
-                className="inline-block bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition mt-4 text-lg font-semibold"
+                className="inline-block bg-green-600 text-white px-4 py-1 sm:px-6 sm:py-2 rounded hover:bg-green-700 transition mt-2 sm:mt-4 text-sm sm:text-lg font-semibold"
               >
                 Contact Us
               </Link>
             </div>
 
             {/* Arrows for second row */}
-            <div className="absolute top-[calc(100%+40px)] left-[18%] w-[25%] h-0 border-t-2 border-dotted border-blue-700 z-0 animate-move">
+            <div className="hidden sm:block absolute top-[calc(100%+40px)] left-[18%] w-[25%] h-0 border-t-2 border-dotted border-blue-700 z-0 animate-move">
               <div className="absolute -right-2 -top-2 rotate-45 w-4 h-4 border-t-4 border-r-4 border-blue-700"></div>
             </div>
-            <div className="absolute top-[calc(100%+40px)] left-[52%] w-[30%] h-0 border-t-2 border-dotted border-green-700 z-0 animate-fast-move">
+            <div className="hidden sm:block absolute top-[calc(100%+40px)] left-[52%] w-[30%] h-0 border-t-2 border-dotted border-green-700 z-0 animate-fast-move">
               <div className="absolute -right-3 -top-3 rotate-45 w-6 h-6 border-t-4 border-r-4 border-green-700"></div>
             </div>
           </div>
@@ -259,5 +260,5 @@ export default function TenderPage() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
