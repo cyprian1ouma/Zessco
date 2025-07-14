@@ -82,7 +82,7 @@ export default function Home() {
             Win That Tender with Confidence
           </h1>
           <h2 className="text-xl sm:text-2xl text-blue-800 mb-6 sm:mb-8">
-            #1 Tender Documentation Experts in Kenya
+           The #1 Tender Documentation Experts in Kenya
           </h2>
           <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8 max-w-3xl mx-auto">
             Over 1,000 successful clients. Our team of engineers, auditors, advocates, and technical experts prepares winning tenders — even under tight timelines.
@@ -104,7 +104,7 @@ export default function Home() {
               Why Choose Zessco International?
             </h2>
             <h4 className="text-base sm:text-lg font-medium text-blue-900 text-center mb-8 sm:mb-12 max-w-3xl mx-auto">
-              Compliance is Our Cornerstone — 80% of tenders are disqualified before reaching the financial stage. Our deep technical expertise ensures that your submission checks all the boxes for compliance right from the start.
+               80% of tenders are disqualified before reaching the financial stage. Our deep technical expertise ensures that your submission checks all the boxes for compliance right from the start.
             </h4>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -167,7 +167,12 @@ export default function Home() {
               "Financial Audits & Statements (CPA Auditors)",
               "Formatting to Tender Standards",
               "Tender Submission & Delivery Support",
-              "Aftercare: KRA, Trend Updates, Feedback"
+              "Aftercare: KRA, Trend Updates, Feedback",
+              "Bit compilation",
+              "Filling of Bill of Quantities",
+              "Preparation of Audited Accounts",
+              "Online E.G.P tendering services",
+              "Graphic Design"
             ].map((service, index) => (
               <div key={index} className="border border-blue-200 rounded-lg p-3 sm:p-4 hover:bg-blue-50 transition">
                 <p className="text-sm sm:text-base md:text-lg">{service}</p>
@@ -175,7 +180,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-8 sm:mt-12">
-            <Link href="/consultation" className="bg-blue-900 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-blue-800 transition font-semibold text-sm sm:text-base">
+            <Link href="/services" className="bg-blue-900 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-blue-800 transition font-semibold text-sm sm:text-base">
               Book Free Tender Review
             </Link>
           </div>
