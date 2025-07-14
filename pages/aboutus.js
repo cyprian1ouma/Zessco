@@ -63,10 +63,10 @@ export default function About() {
         <section className="max-w-4xl mx-auto py-12 px-6 text-center">
           <h2 className="text-3xl font-bold text-blue-800 mb-6">Who We Are</h2>
           <p className="text-lg text-gray-700 mb-4">
-            Zessco International is Kenya's leading tender documentation and compliance consultancy. Based in Nairobi at Tumaini House (opposite Kencom), we specialize in helping businesses secure public and private sector tenders with precision, speed, and confidence.
+            Zessco International is Kenya&apos;s leading tender documentation and compliance consultancy. Based in Nairobi at Tumaini House (opposite Kencom), we specialize in helping businesses secure public and private sector tenders with precision, speed, and confidence.
           </p>
           <p className="text-lg text-gray-700">
-            We bring together a unique team of experts — from engineers and auditors to legal professionals and procurement officers — all working under one roof to give you the highest chance of success. Whether you're just starting out or already a seasoned contractor, Zessco is your partner in growth and compliance.
+            We bring together a unique team of experts — from engineers and auditors to legal professionals and procurement officers — all working under one roof to give you the highest chance of success. Whether you&apos;re just starting out or already a seasoned contractor, Zessco is your partner in growth and compliance.
           </p>
         </section>
 
@@ -94,7 +94,7 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold text-blue-800 mb-4">Our Vision</h2>
             <p className="text-lg text-gray-700">
-              To become Kenya's most trusted and results-driven tender application and compliance firm.
+              To become Kenya&apos;s most trusted and results-driven tender application and compliance firm.
             </p>
           </div>
           <div className="grid sm:grid-cols-1 gap-6">
@@ -130,7 +130,9 @@ export default function About() {
             </div>
             <div className="bg-blue-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-blue-900 mb-3">5. Company Transactions</h3>
-              <p className="text-gray-700">We assist in buying, selling, and leasing companies — with or without past experience — legally and ethically.</p>
+              <p className="text-gray-700">
+                We assist in buying, selling, and leasing companies — with or without past experience — legally and ethically.
+              </p>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-blue-900 mb-3">6. Regulatory Compliance Assistance</h3>
