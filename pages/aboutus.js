@@ -1,4 +1,3 @@
-// File: pages/aboutus.js
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { FaFacebook, FaInstagram, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
@@ -15,12 +14,36 @@ const imageGallery = [
 ];
 
 const testimonials = [
-  { name: 'John Mwangi', image: '/image1.png', comment: 'Excellent services, always on time!' },
-  { name: 'Grace Wanjiku', image: '/image1.png', comment: 'Professional and dependable team!' },
-  { name: 'Ali Yusuf', image: '/image1.png', comment: 'Zessco has simplified my logistics.' },
-  { name: 'Linda Achieng', image: '/image1.png', comment: 'Great communication and support!' },
-  { name: 'Peter Otieno', image: '/image1.png', comment: 'Fast, secure, and efficient.' },
-  { name: 'Mercy Chebet', image: '/image1.png', comment: 'Would recommend Zessco to anyone.' }
+  { 
+    name: 'John Mwangi', 
+    image: '/image1.png', 
+    comment: 'Excellent services, always on time!' 
+  },
+  { 
+    name: 'Grace Wanjiku', 
+    image: '/image1.png', 
+    comment: 'Professional and dependable team!' 
+  },
+  { 
+    name: 'Ali Yusuf', 
+    image: '/image1.png', 
+    comment: 'Zessco has simplified my logistics.' 
+  },
+  { 
+    name: 'Linda Achieng', 
+    image: '/image1.png', 
+    comment: 'Great communication and support!' 
+  },
+  { 
+    name: 'Peter Otieno', 
+    image: '/image1.png', 
+    comment: 'Fast, secure, and efficient.' 
+  },
+  { 
+    name: 'Mercy Chebet', 
+    image: '/image1.png', 
+    comment: 'Would recommend Zessco to anyone.' 
+  }
 ];
 
 export default function About() {
@@ -67,7 +90,7 @@ export default function About() {
             Zessco International is Kenya&apos;s leading tender documentation and compliance consultancy. Based in Nairobi at Tumaini House (opposite Kencom), we specialize in helping businesses secure public and private sector tenders with precision, speed, and confidence.
           </p>
           <p className="text-lg text-gray-700">
-            We bring together a unique team of experts &mdash; from engineers and auditors to legal professionals and procurement officers &mdash; all working under one roof to give you the highest chance of success. Whether you&apos;re just starting out or already a seasoned contractor, Zessco is your partner in growth and compliance.
+            We bring together a unique team of experts — from engineers and auditors to legal professionals and procurement officers — all working under one roof to give you the highest chance of success. Whether you&apos;re just starting out or already a seasoned contractor, Zessco is your partner in growth and compliance.
           </p>
         </section>
 
@@ -85,7 +108,7 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold text-blue-800 mb-4">Our Mission</h2>
             <p className="text-lg text-gray-700 mb-4">
-              To empower businesses across Kenya to win tenders, stay compliant, and grow sustainably &mdash; regardless of their size or stage.
+              To empower businesses across Kenya to win tenders, stay compliant, and grow sustainably — regardless of their size or stage.
             </p>
           </div>
         </section>
@@ -131,7 +154,7 @@ export default function About() {
             </div>
             <div className="bg-blue-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-blue-900 mb-3">5. Company Transactions</h3>
-              <p className="text-gray-700">We assist in buying, selling, and leasing companies &mdash; with or without past experience &mdash; legally and ethically.</p>
+              <p className="text-gray-700">We assist in buying, selling, and leasing companies — with or without past experience — legally and ethically.</p>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-blue-900 mb-3">6. Regulatory Compliance Assistance</h3>
@@ -173,7 +196,10 @@ export default function About() {
               'Chebet Kiptoo',
               'Omondi Baraka'
             ].map((name, i) => (
-              <div key={i} className="relative group overflow-hidden rounded-lg shadow-lg">
+              <div
+                key={i}
+                className="relative group overflow-hidden rounded-lg shadow-lg"
+              >
                 <Image
                   src="/image1.png"
                   width={400}
@@ -184,10 +210,18 @@ export default function About() {
                 <div className="p-4 bg-white text-center">
                   <h3 className="text-lg font-bold text-blue-900">{name}</h3>
                   <div className="flex justify-center gap-4 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <a href="#" className="text-blue-600 hover:scale-125 transition-transform"><FaFacebook /></a>
-                    <a href="#" className="text-pink-500 hover:scale-125 transition-transform"><FaInstagram /></a>
-                    <a href="#" className="text-sky-500 hover:scale-125 transition-transform"><FaXTwitter /></a>
-                    <a href="#" className="text-blue-700 hover:scale-125 transition-transform"><FaLinkedin /></a>
+                    <a href="#" className="text-blue-600 hover:scale-125 transition-transform">
+                      <FaFacebook />
+                    </a>
+                    <a href="#" className="text-pink-500 hover:scale-125 transition-transform">
+                      <FaInstagram />
+                    </a>
+                    <a href="#" className="text-sky-500 hover:scale-125 transition-transform">
+                      <FaXTwitter />
+                    </a>
+                    <a href="#" className="text-blue-700 hover:scale-125 transition-transform">
+                      <FaLinkedin />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -216,6 +250,7 @@ export default function About() {
               </div>
             ))}
           </div>
+
           <div className="mt-12 text-center">
             <p className="text-lg text-gray-800 italic max-w-2xl mx-auto">
               &ldquo;Looking back, we&apos;re proud of how far we&apos;ve come. Looking ahead, we&apos;re excited to go even further with our clients, partners, and communities.&rdquo;
@@ -225,5 +260,5 @@ export default function About() {
       </main>
       <Footer />
     </>
-  );
+  )
 }
