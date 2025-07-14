@@ -1,16 +1,25 @@
 import Link from 'next/link';
 import {
   FaFacebookF,
+  FaWhatsapp,
   FaTwitter,
   FaGoogle,
   FaInstagram,
   FaHome,
   FaEnvelope,
   FaPhone,
-  FaPrint,
+  FaChair,
+  FaArrowUp,
 } from 'react-icons/fa';
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <footer className="bg-blue-900 text-white text-center text-md-start pt-10 pb-6 px-4 md:px-16">
       <div className="max-w-7xl mx-auto">
@@ -20,8 +29,9 @@ export default function Footer() {
           <div>
             <h6 className="uppercase font-bold mb-4">Zessco Logistics</h6>
             <p>
-              Organizing your logistics with trust and simplicity. Experience
-              seamless freight, warehousing, and delivery solutions.
+              Organizing your Tender Application with trust and simplicity. Experience
+              seamless freigh and delivery solutions.
+              <span className='uppercase font-bold text-orange-500'> Simple. Complete. Professional.</span>
             </p>
           </div>
 
@@ -56,17 +66,19 @@ export default function Footer() {
                 <FaHome className="text-lg" />
                 <span className="ml-2">Nairobi, Kenya</span>
               </li>
+
+              <li className="flex items-center text-white">
+                <FaChair className="text-lg" />
+                <span className="ml-2">Tumaini House, Opposite Kencom</span>
+              </li>
+              
               <li className="flex items-center text-white">
                 <FaEnvelope className="text-lg" />
-                <span className="ml-2">info@zessco.com</span>
+                <span className="ml-2">Email: info@zesscointernational.com</span>
               </li>
               <li className="flex items-center text-white">
                 <FaPhone className="text-lg" />
-                <span className="ml-2">+254 712 345 678</span>
-              </li>
-              <li className="flex items-center text-white">
-                <FaPrint className="text-lg" />
-                <span className="ml-2">+254 722 345 679</span>
+                <span className="ml-2">Phone: +254796977092</span>
               </li>
             </ul>
           </div>
@@ -81,6 +93,9 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-3 text-white text-lg">
+            <a href="#" className="hover:scale-125 hover:text-green-400 transition duration-300">
+              <FaWhatsapp />
+            </a>
             <a href="#" className="hover:scale-125 hover:text-blue-400 transition duration-300">
               <FaFacebookF />
             </a>
@@ -96,6 +111,15 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Back to Top Button */}
+      <button 
+        onClick={scrollToTop}
+        className="fixed bottom-6 right-6 bg-orange-500 text-white p-3 rounded-full shadow-lg hover:bg-orange-600 transition duration-20000 z-50 group flex items-center"
+        aria-label="Back to top">
+        <FaArrowUp className="text-xl" />
+      </button>
+
     </footer>
-  );
+  )
 }
