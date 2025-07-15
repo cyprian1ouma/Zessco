@@ -164,7 +164,7 @@ export default function About() {
         </section>
 
         {/* Testimonials */}
-        <div>
+        {/* <div>
           <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-800 mb-8 md:mb-12 mt-8 md:mt-12 my-4 md:my-6">Customer Testimonials</h2>
           <section className="relative h-[50vh] md:h-[60vh] text-white text-center flex items-center justify-center bg-black">
             <Image
@@ -182,7 +182,7 @@ export default function About() {
               <p className="mt-4 font-semibold">- {testimonials[currentTestimonial].name}</p>
             </div>
           </section>
-        </div>
+        </div> */}
 
         {/* Team */}
         <section className="py-8 md:py-12 px-4 md:px-6 max-w-7xl mx-auto">

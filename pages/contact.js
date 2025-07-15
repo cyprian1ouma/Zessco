@@ -83,7 +83,7 @@ export default function Contact() {
               <p><strong>Building:</strong> Tumaini House, Opposite Kencom</p>
               <p><strong>Country:</strong> Nairobi- Kenya</p>
               <p><strong>Postal Code:</strong> P.O. Box 6487-00200</p> 
-              <p><strong>Phone:</strong> +254 96977092</p>
+              <p><strong>Phone:</strong>+254 724 210375</p>
               <p><strong>Email:</strong> info@zesscointernational.com</p>
             </div>
 

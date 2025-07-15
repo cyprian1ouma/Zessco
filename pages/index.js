@@ -82,7 +82,7 @@ export default function Home() {
             Win That Tender with Confidence
           </h1>
           <h2 className="text-xl sm:text-2xl text-blue-800 mb-6 sm:mb-8">
-            The #1 Tender Documentation Experts in Kenya
+            The 1 Tender Documentation Experts in Kenya
           </h2>
           <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8 max-w-3xl mx-auto">
             Over 1,000 successful clients. Our team of engineers, auditors, advocates, and technical experts prepares winning tenders — even under tight timelines.
@@ -168,10 +168,10 @@ export default function Home() {
               "Formatting to Tender Standards",
               "Tender Submission & Delivery Support",
               "Aftercare: KRA, Trend Updates, Feedback",
-              "Bit compilation",
+              "Bid Compilation",
               "Filling of Bill of Quantities",
               "Preparation of Audited Accounts",
-              "Online E.G.P tendering services",
+              "Online E.G.P Tendering Services",
               "Graphic Design"
             ].map((service, index) => (
               <div key={index} className="border border-blue-200 rounded-lg p-3 sm:p-4 hover:bg-blue-50 transition">

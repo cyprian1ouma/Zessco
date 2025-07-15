@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Company Info */}
           <div className="px-2 sm:px-0">
-            <h6 className="uppercase font-bold mb-4 text-lg">Zessco Logistics</h6>
+            <h6 className="uppercase font-bold mb-4 text-lg">Zessco International Consultancy</h6>
             <p className="text-sm sm:text-base">
               Organizing your Tender Application with trust and simplicity. Experience
               seamless freight and delivery solutions.
@@ -39,10 +39,10 @@ export default function Footer() {
           <div className="px-2 sm:px-0">
             <h6 className="uppercase font-bold mb-4 text-lg">Products</h6>
             <ul className="space-y-2">
-              <li><a className="text-white hover:underline text-sm sm:text-base" href="#">Freight Services</a></li>
-              <li><a className="text-white hover:underline text-sm sm:text-base" href="#">Smart Tracking</a></li>
-              <li><a className="text-white hover:underline text-sm sm:text-base" href="#">Cold Chain</a></li>
-              <li><a className="text-white hover:underline text-sm sm:text-base" href="#">Fleet Tools</a></li>
+              <li><a className="text-white hover:underline text-sm sm:text-base" href="#">Tendering</a></li>
+              <li><a className="text-white hover:underline text-sm sm:text-base" href="#">Online Services</a></li>
+              <li><a className="text-white hover:underline text-sm sm:text-base" href="#">CPA Audit</a></li>
+              <li><a className="text-white hover:underline text-sm sm:text-base" href="#">Graphics</a></li>
             </ul>
           </div>
 
@@ -89,7 +89,7 @@ export default function Footer() {
         {/* Bottom Row: Copyright + Social */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
           <div className="order-2 md:order-1 text-sm sm:text-base">
-            © {new Date().getFullYear()} Zessco Logistics. All rights reserved.
+            © {new Date().getFullYear()} Zessco International Consultancy. All rights reserved.
           </div>
 
           <div className="order-1 md:order-2 flex gap-3 text-white text-lg mb-4 md:mb-0">
