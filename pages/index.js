@@ -6,10 +6,7 @@ import Image from 'next/image';
 
 const images = [
   { src: '/image1.png', text: 'Fast Delivery', textAnim: 'animate__fadeInLeft', bgAnim: 'animate__fadeInRight' },
-  { src: '/image1.png', text: 'Secure Storage', textAnim: 'animate__fadeInRight', bgAnim: 'animate__fadeInLeft' },
-  { src: '/image1.png', text: 'Global Reach', textAnim: 'animate__fadeInDown', bgAnim: 'animate__fadeInUp' },
-  { src: '/image1.png', text: '24/7 Support', textAnim: 'animate__fadeInUp', bgAnim: 'animate__fadeInDown' },
-  { src: '/image1.png', text: 'Fleet Tracking', textAnim: 'animate__zoomIn', bgAnim: 'animate__zoomInDown' },
+  { src: '/image1.png', text: 'Secure Process', textAnim: 'animate__fadeInRight', bgAnim: 'animate__fadeInLeft' },
   { src: '/image1.png', text: 'Customs Help', textAnim: 'animate__rotateIn', bgAnim: 'animate__rotateInUpLeft' },
 ];
 
@@ -79,7 +76,7 @@ export default function Home() {
         {/* New Tender Hero Section */}
         <section className="max-w-6xl mx-auto py-12 sm:py-16 px-4 text-center">
           <h1 className="text-2xl sm:text-4xl font-bold text-blue-900 mb-4">
-            Win That Tender with Confidence
+            Win Tender with Confidence
           </h1>
           <h2 className="text-xl sm:text-2xl text-blue-800 mb-6 sm:mb-8">
             The 1 Tender Documentation Experts in Kenya
@@ -89,10 +86,10 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Link href="/tender" className="bg-blue-900 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-blue-800 transition font-semibold text-sm sm:text-base">
-              Start My Tender Now
+              Start Your Tender Now
             </Link>
             <Link href="/eligibility" className="bg-orange-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-orange-600 transition font-semibold text-sm sm:text-base">
-              Free View our catalogue
+               View our catalogue
             </Link>
           </div>
         </section>
@@ -221,7 +218,7 @@ export default function Home() {
         </section>
 
         {/* How It Works Section */}
-        <section className="max-w-6xl mx-auto py-12 sm:py-16 px-4">
+        {/* <section className="max-w-6xl mx-auto py-12 sm:py-16 px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 text-center mb-8 sm:mb-12">
             Our 5-Step Process
           </h2>
@@ -244,7 +241,7 @@ export default function Home() {
           <p className="text-center mt-6 sm:mt-8 text-gray-600 italic text-sm sm:text-base">
             Even if you&apos;re unsure, we review and guide you.
           </p>
-        </section>
+        </section> */}
 
         {/* Success Stories Section */}
         <section className="bg-blue-900 text-white py-12 sm:py-16 px-4">
