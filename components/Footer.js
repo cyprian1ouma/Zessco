@@ -31,7 +31,7 @@ export default function Footer() {
             <p className="text-sm sm:text-base">
               Organizing your Tender Application with trust and simplicity. Experience
               seamless freight and delivery solutions.
-              <span className='uppercase font-bold text-orange-500 block mt-2 text-sm sm:text-base'> Simple. Complete. Professional.</span>
+              <span className='uppercase font-bold text-orange-500 block mt-2 text-sm sm:text-base'> Simple. Complete and Professional.</span>
             </p>
           </div>
 

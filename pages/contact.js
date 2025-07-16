@@ -70,9 +70,9 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-7xl mx-auto mt-6 md:mt-8 pt-4 md:pt-5">
           {/* About */}
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 mb-3 md:mb-4">About Us</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 mb-3 md:mb-4">Who is Zessco International</h2>
             <p className="text-gray-700 text-sm sm:text-base mb-4 md:mb-6">
-              Zessco International provides world-class Tender Application solutions across 47 counties in Kenya. With a focus
+              Zessco International provides world-class Tender Application solutions across the 47 counties in Kenya. With a focus
               on timely delivery, transparency, and innovation, we ensure your Simple. Complete. Professional work done.
               Our commitment to excellence and client satisfaction drives everything we do.
             </p>

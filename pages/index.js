@@ -76,13 +76,13 @@ export default function Home() {
         {/* New Tender Hero Section */}
         <section className="max-w-6xl mx-auto py-12 sm:py-16 px-4 text-center">
           <h1 className="text-2xl sm:text-4xl font-bold text-blue-900 mb-4">
-            Win Tender with Confidence
+            Win Tenders with Confidence
           </h1>
           <h2 className="text-xl sm:text-2xl text-blue-800 mb-6 sm:mb-8">
-            The 1 Tender Documentation Experts in Kenya
+            The Number One Tender Documentation Experts in Kenya
           </h2>
           <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8 max-w-3xl mx-auto">
-            Over 1,000 successful clients. Our team of engineers, auditors, advocates, and technical experts prepares winning tenders — even under tight timelines.
+            Over 10,000 successful clients. Our team of engineers, auditors, advocates, and technical experts prepares winning tenders — even under tight timelines.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Link href="/tender" className="bg-blue-900 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-blue-800 transition font-semibold text-sm sm:text-base">
@@ -101,18 +101,18 @@ export default function Home() {
               Why Choose Zessco International?
             </h2>
             <h4 className="text-base sm:text-lg font-medium text-blue-900 text-center mb-8 sm:mb-12 max-w-3xl mx-auto">
-              80% of tenders are disqualified before reaching the financial stage. Our deep technical expertise ensures that your submission checks all the boxes for compliance right from the start.
+              With 80% of tenders being disqualified before reaching the financial stage. Our deep technical expertise ensures that your bid submission checks all the boxes for compliance right from the start.
             </h4>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {[
                 {
                   title: "Built for Urgent Deadlines",
-                  text: "With a capable and dedicated team, we deliver high-quality tender submissions even under tight timelines.",
+                  text: "With a capable and dedicated team, we deliver high-quality tender submissions even under tight timelines. This is made possible by adequate professionals and personnel who are ready to work around the clock to deliver.",
                 },
                 {
                   title: "Powered by Professionals",
-                  text: "Our team isn&apos;t just made up of writers — we bring together engineers, legal advisors, procurement specialists, auditors, and graphic designers to create technically sound, visually compelling documents.",
+                  text: "Our team isnt just made up of writers we bring together engineers, legal advisors, procurement specialists, auditors, and graphic designers to create technically sound, visually compelling documents.",
                 },
                 {
                   title: "We Stick With You",
@@ -128,7 +128,8 @@ export default function Home() {
                 },
                 {
                   title: "Your Success, Our Priority",
-                  text: "Zessco doesn&apos;t just help you apply — we strategize with you, positioning your bids to stand out and win.",
+                  text: "Zessco doesnt just help you apply; we strategize with you, positioning your bids to stand out and win.",
+                  bg:"bg-blue-300 text-white hover:bg-blue-400 text-blue-900",
                 },
               ].map((item, index) => (
                 <div
@@ -143,9 +144,9 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mt-8 sm:mt-12 bg-white p-4 sm:p-6 rounded-lg shadow-md max-w-3xl mx-auto text-center italic">
-              <p className="text-lg sm:text-xl text-gray-800">
-                &ldquo;At Zessco, we don&apos;t just help you apply — we position you to win.&rdquo;
+            <div className="mt-8 sm:mt-12 bg-blue-900 p-4 sm:p-6 rounded-lg shadow-md max-w-3xl mx-auto text-center italic">
+              <p className="text-lg sm:text-xl text-white">
+                &ldquo;At Zessco, we don&apos;t just help you apply: We position you to win.&rdquo;
               </p>
             </div>
           </div>
@@ -209,7 +210,7 @@ export default function Home() {
                 }
               ].map((item, index) => (
                 <div key={index} className="bg-white p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition">
-                  <h3 className="text-lg sm:text-xl font-semibold text-blue-900 mb-2">{item.title}</h3>
+                  <h3 className="text-lg sm:text-lg font-semibold text-blue-900 mb-2">{item.title}</h3>
                   <p className="text-gray-700 text-sm sm:text-base">{item.desc}</p>
                 </div>
               ))}
@@ -243,31 +244,10 @@ export default function Home() {
           </p>
         </section> */}
 
-        {/* Success Stories Section */}
-        <section className="bg-blue-900 text-white py-12 sm:py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
-              1,000+ Winning Clients — Here&apos;s a Few
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              {[
-                "Zessco helped me win a 5M KEMSA supply contract. They worked fast and professionally. — Susan M., Nairobi",
-                "I was late and stressed. Zessco got my tender ready in 2 days. I was shortlisted. — Brian O., Nakuru",
-                "From zero documents to submission in 3 days — and I WON. Thank you Zessco. — Kevin T., Eldoret"
-              ].map((quote, index) => (
-                <div key={index} className="bg-blue-800 p-4 sm:p-6 rounded-lg">
-                  <p className="italic text-sm sm:text-base">&ldquo;{quote.split(' — ')[0]}&rdquo;</p>
-                  <p className="mt-3 sm:mt-4 font-semibold text-sm sm:text-base">— {quote.split(' — ')[1]}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Final CTA Section */}
         <section className="max-w-6xl mx-auto py-12 sm:py-16 px-4 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-4">
-            You Don&apos;t Have to Be Ready — You Just Need Zessco
+            You Don&apos;t Have to Be Ready, You Just Need Zessco
           </h2>
           <p className="text-base sm:text-xl text-gray-700 mb-6 sm:mb-8 max-w-3xl mx-auto">
             We&apos;ve helped over 1,000 clients win tenders across Kenya. Whether you&apos;re just starting or under pressure, Zessco gives you the expertise, speed, and support to win.
@@ -287,16 +267,16 @@ export default function Home() {
 
         {/* Our Services Section */}
         <section className="max-w-7xl mx-auto px-4 py-12 sm:py-16">
-          <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 text-center mb-8 sm:mb-10">Our Services</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 text-center mb-8 sm:mb-10">Other Services</h2>
           <div className="space-y-6 sm:space-y-10">
             {[
-              { service: '1. Tender Documentation', description: 'Preparation of high-quality, fully compliant tender documents tailored to each opportunity.' },
-              { service: '2. Client Compliance Management', description: 'We ensure our clients are always up-to-date with all legal, financial, and regulatory requirements.' },
-              { service: '3. Document Updating & Secretarial Services', description: 'We handle company updates, renewals, and act as your outsourced corporate secretariat.' },
-              { service: '4. Tender Winning Support', description: 'Beyond paperwork, we strategize with you to give your application the best possible winning chance.' },
-              { service: '5. Company Transactions', description: 'We assist in buying, selling, and leasing companies — with or without past experience — legally and ethically.' },
-              { service: '6. Regulatory Compliance Assistance', description: 'We ensure compliance with KRA, NCA, and all other relevant regulatory authorities.' },
-              { service: '7. Company Profile Preparation', description: 'We prepare compelling, professional company profiles that give you a competitive edge in tendering.' },
+              { service: '1. Client Compliance Management', description: 'We ensure our clients are always up-to-date with all legal, financial, and regulatory requirements.' },
+              { service: '2. Document Updating & Secretarial Services', description: 'We handle company updates, renewals, and act as your outsourced corporate secretariat.' },
+              { service: '3. Company Transactions', description: 'We assist in buying, selling, and leasing companies with or without past experience legally and ethically.' },
+              { service: '4. Regulatory Compliance Assistance', description: 'We ensure compliance with KRA, NCA, and all other relevant regulatory authorities.' },
+              { service: '5. Company Profile Preparation', description: 'We prepare compelling, professional company profiles that give you a competitive edge in tendering.' },
+              { service: '6. Graphic Design', description: 'From logos and branding to marketing materials and company profiles, we craft visually striking designs that communicate your message with clarity and impact.' },
+              { service: '7. Website Development', description: 'We design and develop fast, mobile-friendly websites that reflect your brand, improve user experience, and help you achieve your business objectives online.' },
             ].map((item, index) => (
               <div
                 key={index}
@@ -317,6 +297,63 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        {/* Success Stories Section */}
+        <section className="bg-gradient-to-b from-blue-50 to-blue-100 py-16 sm:py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
+                Join 1,000+ Winning Clients
+              </h2>
+              <p className="text-blue-700 text-lg sm:text-xl max-w-3xl mx-auto">
+                Don&apos;t just take our word for it — here&apos;s what our clients say
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
+              {[
+                {
+                  quote: "Zessco helped me win a 5M KEMSA supply contract. They worked fast and professionally.",
+                  author: "Susan M., Nairobi",
+                  bg: "bg-blue-600"
+                },
+                {
+                  quote: "I was late and stressed. Zessco got my tender ready in 2 days. I was shortlisted.",
+                  author: "Brian O., Nakuru",
+                  bg: "bg-blue-600"
+                },
+                {
+                  quote: "From zero documents to submission in 3 days — and I WON. Thank you Zessco.",
+                  author: "Kevin T., Eldoret",
+                  bg: "bg-blue-600"
+                }
+              ].map((testimonial, index) => (
+                <div 
+                  key={index} 
+                  className={`${testimonial.bg} text-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2`}
+                >
+                  <div className="mb-4 text-blue-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                    </svg>
+                  </div>
+                  <p className="italic text-lg sm:text-xl mb-6 leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
+                  <p className="font-bold text-blue-100 text-base sm:text-lg"> {testimonial.author}</p>
+                </div>
+              ))}
+            </div>
+            
+            <div className="text-center mt-16">
+              <button
+                type="button"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-md"
+              >
+                Read More Success Stories
+              </button>
+            </div>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </>
