@@ -250,7 +250,7 @@ export default function Home() {
             You Don&apos;t Have to Be Ready, You Just Need Zessco
           </h2>
           <p className="text-base sm:text-xl text-gray-700 mb-6 sm:mb-8 max-w-3xl mx-auto">
-            We&apos;ve helped over 1,000 clients win tenders across Kenya. Whether you&apos;re just starting or under pressure, Zessco gives you the expertise, speed, and support to win.
+            We&apos;ve helped over 10,000 clients win tenders across Kenya. Whether you&apos;re just starting or under pressure, Zessco gives you the expertise, speed, and support to win.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Link href="/tender" className="bg-blue-900 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-blue-800 transition font-semibold text-sm sm:text-base">
