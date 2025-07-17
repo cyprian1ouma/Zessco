@@ -303,7 +303,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
-                Join 1,000+ Winning Clients
+                Join 10,000+ Winning Clients
               </h2>
               <p className="text-blue-700 text-lg sm:text-xl max-w-3xl mx-auto">
                 Don&apos;t just take our word for it — here&apos;s what our clients say
