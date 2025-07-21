@@ -269,14 +269,40 @@ export default function Home() {
         <section className="max-w-7xl mx-auto px-4 py-12 sm:py-16">
           <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 text-center mb-8 sm:mb-10">Other Services</h2>
           <div className="space-y-6 sm:space-y-10">
-            {[
-              { service: '1. Client Compliance Management', description: 'We ensure our clients are always up-to-date with all legal, financial, and regulatory requirements.' },
-              { service: '2. Document Updating & Secretarial Services', description: 'We handle company updates, renewals, and act as your outsourced corporate secretariat.' },
-              { service: '3. Company Transactions', description: 'We assist in buying, selling, and leasing companies with or without past experience legally and ethically.' },
-              { service: '4. Regulatory Compliance Assistance', description: 'We ensure compliance with KRA, NCA, and all other relevant regulatory authorities.' },
-              { service: '5. Company Profile Preparation', description: 'We prepare compelling, professional company profiles that give you a competitive edge in tendering.' },
-              { service: '6. Graphic Design', description: 'From logos and branding to marketing materials and company profiles, we craft visually striking designs that communicate your message with clarity and impact.' },
-              { service: '7. Website Development', description: 'We design and develop fast, mobile-friendly websites that reflect your brand, improve user experience, and help you achieve your business objectives online.' },
+          {[
+              {
+                service: '1. Tender Documentation',
+                description: 'We specialize in preparing complete, customized tender documents that comply with the latest requirements of public and private procuring entities. Our team consists of expert engineers, legal advisors, financial analysts, and compliance officers who work together to deliver well-structured and competitive documents.'
+              },
+              {
+                service: '2. Compliance Support',
+                description: 'We help you secure and maintain all key compliance documents, including KRA tax compliance certificates, NCA registration, NEMA approvals, HELB clearances, and more. Our service includes tracking deadlines and renewals so you\'re never disqualified due to expired documents.'
+              },
+              {
+                service: '3. Bid Submission Assistance',
+                description: 'We guide you through online tender platforms like IFMIS, KPLC, or eCitizen, ensuring your documents are uploaded correctly, digitally signed if necessary, and submitted before the deadline, including urgent last-minute uploads.'
+              },
+              {
+                service: '4. Post-Tender Support',
+                description: 'We help track bid progress, respond to clarification requests, and prepare post-award documents such as bid bonds, performance guarantees, and award acceptance letters.'
+              },
+              {
+                service: '5. Company Profile Preparation',
+                description: 'Professional company profiles that tell your story, highlight your experience, and build trust with evaluators.'
+              },
+              {
+                service: '6. Graphic Design Services',
+                description: 'High-quality graphic design for proposal layouts, logos, and company branding to enhance your professional image.',
+                bg: 'bg-blue-100'
+              },
+              {
+                service: '7. Website Development',
+                description: 'Clean, credible website development to give your business an online presence that attracts opportunities.'
+              },
+              {
+                service: '8. Secretarial Services',
+                description: 'Company secretarial services to help with registrations, CR12s, and shareholder structures.'
+              }
             ].map((item, index) => (
               <div
                 key={index}

@@ -154,7 +154,7 @@ export default function About() {
             </div>
             <div className="bg-blue-50 p-4 md:p-6 rounded-lg">
               <h3 className="text-lg md:text-xl font-semibold text-blue-900 mb-3">5. Company Transactions</h3>
-              <p className="text-gray-700">We assist in buying, selling, and leasing companies — with or without past experience — legally and ethically.</p>
+              <p className="text-gray-700">We assist in buying, selling, and leasing companies  with or without past experience legally and ethically.</p>
             </div>
             <div className="bg-blue-50 p-4 md:p-6 rounded-lg">
               <h3 className="text-lg md:text-xl font-semibold text-blue-900 mb-3">6. Regulatory Compliance Assistance</h3>
@@ -185,41 +185,46 @@ export default function About() {
         </div> */}
 
         {/* Team */}
+        
         <section className="py-8 md:py-12 px-4 md:px-6 max-w-7xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-800 mb-8 md:mb-10">Our Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
             {[
-              'Wanjiku Njeri',
-              'Otieno Makori',
-              'Achieng Moraa',
-              'Mutiso Kamau',
-              'Chebet Kiptoo',
-              'Omondi Baraka'
-            ].map((name, i) => (
+              { name: 'FELIX ADEK', position: 'DIRECTOR' },
+              { name: 'FELIX OBUNG', position: 'HEAD OF PROCUREMENT' },
+              { name: 'BRIAN OKOTH', position: 'PROCUREMENT' },
+              { name: 'JOHN OLIMA', position: 'PROCUREMENT' },
+              { name: 'LAURA JUMA', position: 'SECRETARY' },
+              { name: 'KEVIN OCHIENG', position: 'PROCUREMENT' },
+              { name: 'JUSTUS MULWA', position: 'GRAPHIC DESIGNER' },
+            ].map((member, index) => (
               <div
-                key={i}
+                key={`team-member-${index}`}
                 className="relative group overflow-hidden rounded-lg shadow-lg"
               >
                 <Image
                   src="/image1.png"
                   width={400}
                   height={300}
-                  alt={`Team member ${i + 1}`}
+                  alt={`${member.name} - ${member.position}`}
                   className="w-full h-64 md:h-72 object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="p-4 bg-white text-center">
-                  <h3 className="text-lg font-bold text-blue-900">{name}</h3>
+                <h3 className="text-lg font-bold text-blue-900 opacity-100 hover:opacity-100 transition-opacity duration-500">
+                  {member.name}
+                </h3>
+                  <p className="text-sm text-orange-600 hover:text-lg opacity-100 transition-opacity duration-500">{member.position}</p>
                   <div className="flex justify-center gap-4 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <a href="#" className="text-blue-600 hover:scale-125 transition-transform">
+                    <a href="#" aria-label={`${member.name} Facebook`} className="text-blue-600 hover:scale-125 transition-transform">
                       <FaFacebook />
                     </a>
-                    <a href="#" className="text-pink-500 hover:scale-125 transition-transform">
+                    <a href="#" aria-label={`${member.name} Instagram`} className="text-pink-500 hover:scale-125 transition-transform">
                       <FaInstagram />
                     </a>
-                    <a href="#" className="text-sky-500 hover:scale-125 transition-transform">
+                    <a href="#" aria-label={`${member.name} Twitter`} className="text-sky-500 hover:scale-125 transition-transform">
                       <FaXTwitter />
                     </a>
-                    <a href="#" className="text-blue-700 hover:scale-125 transition-transform">
+                    <a href="#" aria-label={`${member.name} LinkedIn`} className="text-blue-700 hover:scale-125 transition-transform">
                       <FaLinkedin />
                     </a>
                   </div>
@@ -232,24 +237,15 @@ export default function About() {
         {/* History */}
         <section className="bg-white py-8 md:py-16 px-4 md:px-6 max-w-7xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-800 mb-8 md:mb-12">Our History</h2>
-          <div className="space-y-8 md:space-y-10 border-l-4 border-blue-200 pl-4 md:pl-6">
-            {[
-              { year: '2017', desc: 'Zessco was founded in Nairobi with a vision to streamline logistics in Kenya through technology and dedication to service.' },
-              { year: '2018', desc: 'Secured first major logistics contract and expanded operations to Mombasa and Kisumu.' },
-              { year: '2019', desc: 'Launched a digital fleet tracking system, improving delivery efficiency and customer confidence.' },
-              { year: '2020', desc: 'Adapted quickly to COVID-19 challenges by introducing contactless delivery and health-safe protocols.' },
-              { year: '2021', desc: 'Opened a new logistics hub in Eldoret and doubled our vehicle fleet to meet growing demand.' },
-              { year: '2022', desc: 'Partnered with regional firms to launch cross-border deliveries in East Africa.' },
-              { year: '2023', desc: 'Introduced green logistics solutions, focusing on sustainability and eco-friendly transport options.' },
-              { year: '2024', desc: 'Digitized tender processing and implemented AI-powered scheduling for optimized route planning.' },
-              { year: '2025', desc: 'Now serving all 47 counties of Kenya with plans to launch a pan-African logistics network by 2026.' }
-            ].map((event, idx) => (
-              <div key={idx}>
-                <h3 className="text-lg md:text-xl font-bold text-blue-700">{event.year}</h3>
-                <p className="text-gray-700">{event.desc}</p>
-              </div>
-            ))}
-          </div>
+          <div className="space-y-6 md:space-y-8 border-l-4 border-blue-200 pl-4 md:pl-6">
+              <p className="text-gray-700">
+                Founded in <strong>2020</strong> and officially incorporated on <strong>June 7th</strong> of the same year, <strong>Zessco East Africa Limited</strong> was established with a vision to bridge the gap in quality service delivery across Kenya’s construction and supply sectors. Driven by youthful ambition and professional integrity, the company began as a small team of skilled individuals with diverse expertise in civil engineering, logistics, procurement, and compliance.
+              </p>
+              <p className="text-gray-700">
+                From our modest beginnings at <strong>Tumaini House in Nairobi</strong>, we have grown into a trusted partner in construction, general supplies, and equipment hire, serving both government and private sector clients. Our journey has been marked by a strong commitment to <strong>efficiency, innovation, and excellence</strong>qualities that continue to shape our legacy today.
+              </p>
+            </div>
+
 
           <div className="mt-8 md:mt-12 text-center">
             <p className="text-base md:text-lg text-gray-800 italic max-w-2xl mx-auto">
