@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import { useState } from "react";
-import Link from "next/link"; // Added import
+import Link from "next/link";
 
 const ServiceModal = ({ service, isOpen, onClose, type }) => {
   if (!isOpen || !service) return null;
@@ -13,7 +13,7 @@ const ServiceModal = ({ service, isOpen, onClose, type }) => {
         <div className="p-6">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-xl font-bold text-blue-900">
-              {type === 'details' ? service.title : `Contact for ${service.title}`}
+              {type === 'details' ? service.title : `Tender for ${service.title}`}
             </h3>
             <button
               onClick={onClose}
@@ -28,7 +28,7 @@ const ServiceModal = ({ service, isOpen, onClose, type }) => {
               <p className="text-gray-700 text-sm">{service.detailedInfo}</p>
               {service.subServices && (
                 <div className="mt-4">
-                  <h4 className="font-semibold text-blue-800 mb-2 text-sm">Sub-Services:</h4>
+                  <h4 className="font-semibold text-blue-800 mb-2 text-sm">Tender Categories:</h4>
                   <ul className="space-y-2">
                     {service.subServices.map((sub, idx) => (
                       <li key={idx} className="pl-3 border-l-2 border-blue-200">
@@ -42,7 +42,7 @@ const ServiceModal = ({ service, isOpen, onClose, type }) => {
               
               {service.features && (
                 <div className="mt-4">
-                  <h4 className="font-semibold text-blue-800 mb-2 text-sm">Key Features:</h4>
+                  <h4 className="font-semibold text-blue-800 mb-2 text-sm">Tender Requirements:</h4>
                   <ul className="space-y-1">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2">
@@ -59,7 +59,7 @@ const ServiceModal = ({ service, isOpen, onClose, type }) => {
                   href="/contact"
                   className="inline-block bg-blue-600 text-white px-3 py-1.5 rounded text-xs font-semibold hover:bg-blue-700 transition-colors"
                 >
-                  Contact Us
+                  Submit Tender
                 </Link>
               </div>
             </div>
@@ -67,38 +67,38 @@ const ServiceModal = ({ service, isOpen, onClose, type }) => {
             <div className="space-y-4">
               <div className="space-y-3">
                 <div className="flex items-center gap-2 p-2 bg-blue-50 rounded">
-                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white">
+                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-green">
                     <span className="text-sm">📞</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-800 text-sm">Phone Call</p>
+                    <p className="font-semibold text-gray-800 text-sm">Tender Inquiries</p>
                     <p className="text-blue-600 text-xs">+254 725798258</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-2 p-2 bg-blue-50 rounded">
-                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white">
+                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-green">
                     <span className="text-sm">💬</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-800 text-sm">WhatsApp</p>
+                    <p className="font-semibold text-gray-800 text-sm">WhatsApp Tenders</p>
                     <p className="text-blue-600 text-xs">+254 725798258</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-2 p-2 bg-blue-50 rounded">
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white">
+                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-green">
                     <span className="text-sm">✉️</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-800 text-sm">Email</p>
-                    <p className="text-blue-600 text-xs">info@zesscointernational.com</p>
+                    <p className="font-semibold text-gray-800 text-sm">Tender Email</p>
+                    <p className="text-blue-600 text-xs">tenders@zesscointernational.com</p>
                   </div>
                 </div>
               </div>
 
               <p className="text-gray-600 text-xs">
-                We typically respond within 1-2 hours during business days.
+                Tender documents available upon request. Submission deadlines apply.
               </p>
             </div>
           )}
@@ -124,215 +124,249 @@ export default function ServicesPage() {
     setSelectedService(null);
   };
 
-  const civilEngineeringServices = [
+  const civilEngineeringTenders = [
     {
-      title: "Road Works",
-      description: "Comprehensive road construction, maintenance, and rehabilitation services",
-      detailedInfo: "We provide complete road construction solutions including planning, design, construction, and maintenance. Our team ensures durability, safety, and compliance with all regulatory standards. We use modern equipment and proven techniques to deliver roads that last.",
+      title: "Road Works Tender",
+      description: "Tendering services for road construction, maintenance, and rehabilitation projects",
+      detailedInfo: "We provide tender services for comprehensive road works including planning, design, construction, and maintenance. We handle tender documentation, submission, and compliance for all road projects.",
       features: [
-        "Modern construction equipment",
-        "Experienced engineering team",
-        "Quality materials",
-        "Timely project completion",
-        "Safety compliance"
+        "Tender documentation preparation",
+        "Technical proposal development",
+        "Financial bid structuring",
+        "Compliance verification",
+        "Submission management",
+        
       ],
       subServices: [
-        { name: "Road Construction", description: "Building new roads and highways with modern techniques" },
-        { name: "Road Maintenance", description: "Regular upkeep and repair of existing road networks" },
-        { name: "Asphalt Paving", description: "High-quality asphalt laying and resurfacing" },
-        { name: "Drainage Systems", description: "Stormwater drainage and water management systems" }
+        { name: "Road Construction Tenders", description: "Tender services for new road and highway projects" },
+        { name: "Road Maintenance Tenders", description: "Tendering for road upkeep and repair contracts" },
+        { name: "Asphalt Works Tenders", description: "Tender services for resurfacing projects" },
+        { name: "Drainage Systems Tenders", description: "Tendering for water management systems" },
+        { name: "Bridge Works Tenders", description: "Tender services for bridge construction and repair" },
+        { name: "Pavement Marking Tenders", description: "Tendering for road safety markings" },
+        {name:" And many more...", description: "" }
       ]
     },
     {
-      title: "Water Works",
-      description: "Complete water infrastructure development and management",
-      detailedInfo: "Specializing in water supply systems, treatment plants, and distribution networks. We ensure sustainable water management solutions for communities and industries. Our expertise includes borehole drilling, dam construction, and irrigation systems.",
+      title: "Water Works Tender",
+      description: "Tendering services for water infrastructure projects",
+      detailedInfo: "We handle tenders for water supply systems, treatment plants, and distribution networks. Our expertise ensures successful tender submissions for water infrastructure development.",
       features: [
-        "Sustainable water solutions",
-        "Modern drilling equipment",
-        "Water quality testing",
-        "Efficient irrigation systems",
-        "Maintenance services"
+        "Water project tendering",
+        "Technical specifications",
+        "Regulatory compliance",
+        "Bid evaluation support",
+        "Contract negotiation",
+        
       ],
       subServices: [
-        { name: "Borehole Drilling", description: "Professional drilling and installation of boreholes" },
-        { name: "Water Dams", description: "Construction of water storage and conservation dams" },
-        { name: "Irrigation Systems", description: "Design and installation of efficient irrigation networks" },
-        { name: "Water Treatment", description: "Purification and treatment systems installation" }
+        { name: "Borehole Tenders", description: "Tendering for drilling and installation projects" },
+        { name: "Water Dam Tenders", description: "Tender services for water storage projects" },
+        { name: "Irrigation Tenders", description: "Tendering for agricultural water systems" },
+        { name: "Water Treatment Tenders", description: "Tender services for purification systems" },
+        { name: "Piping Tenders", description: "Tendering for water distribution networks" },
+        { name: "Sewerage Tenders", description: "Tender services for wastewater management" },
+        {name:" And many more...", description: "" }
+
       ]
     },
     {
-      title: "Electrical Works",
-      description: "Full electrical installations, maintenance, and power solutions",
-      detailedInfo: "Certified electrical contractors providing safe and reliable electrical systems for residential, commercial, and industrial projects. We handle everything from wiring to complete electrical system installation.",
+      title: "Electrical Works Tender",
+      description: "Tendering services for electrical installations and power solutions",
+      detailedInfo: "We provide tender services for electrical system installations across residential, commercial, and industrial projects. We ensure all tender requirements are met for successful bidding.",
       features: [
-        "Certified electricians",
-        "Safety first approach",
-        "Energy efficient solutions",
-        "24/7 emergency services",
-        "Quality materials"
+        "Electrical tender preparation",
+        "Safety compliance documentation",
+        "Technical specifications",
+        "Equipment certification",
+        "Bid submission management",
+      
       ],
       subServices: [
-        { name: "Wiring Installation", description: "Complete electrical wiring for buildings" },
-        { name: "Power Distribution", description: "Electrical panel and distribution system setup" },
-        { name: "Lighting Solutions", description: "Interior and exterior lighting design and installation" },
-        { name: "Generator Installation", description: "Backup power systems installation" }
+        { name: "Wiring Tenders", description: "Tendering for electrical wiring projects" },
+        { name: "Power Distribution Tenders", description: "Tender services for electrical panels" },
+        { name: "Lighting Tenders", description: "Tendering for lighting system projects" },
+        { name: "Generator Tenders", description: "Tender services for backup power systems" },
+        { name: "Solar Power Tenders", description: "Tendering for renewable energy installations" },
+        { name: "Transformer Tenders", description: "Tender services for power transformers" },
+        {name:" And many more...", description: "" }
       ]
     },
     {
-      title: "Building Works",
-      description: "Architectural design, construction, and structural works",
-      detailedInfo: "From architectural design to complete construction, we deliver quality buildings that meet client specifications and regulatory requirements. We handle both residential and commercial projects.",
+      title: "Building Works Tender",
+      description: "Tendering services for construction and architectural projects",
+      detailedInfo: "We handle tenders for building construction from design to completion. Our tender services ensure compliance with all architectural and construction requirements.",
       features: [
-        "Architectural design",
-        "Quality construction",
-        "Project management",
-        "Timely delivery",
-        "Cost-effective solutions"
+        "Architectural tender services",
+        "Construction bid preparation",
+        "Project documentation",
+        "Regulatory compliance",
+        "Contract management",
+        "And more..."
       ],
       subServices: [
-        { name: "Architectural Design", description: "Creative and functional building designs" },
-        { name: "Construction", description: "Complete building construction services" },
-        { name: "Renovation", description: "Building refurbishment and upgrades" },
-        { name: "Structural Works", description: "Foundation and structural works" }
+        { name: "Design Tenders", description: "Tendering for architectural design projects" },
+        { name: "Construction Tenders", description: "Tender services for building projects" },
+        { name: "Renovation Tenders", description: "Tendering for building refurbishment" },
+        { name: "Structural Tenders", description: "Tender services for foundation works" },
+        { name: "Finishing Tenders", description: "Tendering for interior and exterior finishes" },
+        { name: "Landscaping Tenders", description: "Tender services for outdoor spaces" },
+        {name:" And many more...", description: "" }
       ]
     },
     {
-      title: "Mechanical Works",
-      description: "Mechanical systems installation and maintenance",
-      detailedInfo: "Specialized mechanical engineering services including HVAC systems, plumbing, and industrial equipment installation. We ensure efficient and reliable mechanical systems.",
+      title: "Mechanical Works Tender",
+      description: "Tendering services for mechanical systems installation",
+      detailedInfo: "We provide tender services for mechanical engineering projects including HVAC systems, plumbing, and industrial equipment installation.",
       features: [
-        "Expert technicians",
-        "Modern equipment",
-        "Energy efficient systems",
-        "Regular maintenance",
-        "Quick response time"
+        "Mechanical tender preparation",
+        "Equipment specifications",
+        "Installation requirements",
+        "Maintenance contracts",
+        "Technical compliance",
+        "And more..."
       ],
       subServices: [
-        { name: "HVAC Systems", description: "Heating, ventilation and air conditioning installation" },
-        { name: "Plumbing", description: "Complete plumbing systems for buildings" },
-        { name: "Equipment Installation", description: "Industrial machinery and equipment setup" },
-        { name: "Maintenance Services", description: "Regular maintenance and repairs" }
+        { name: "HVAC Tenders", description: "Tendering for heating and cooling systems" },
+        { name: "Plumbing Tenders", description: "Tender services for plumbing systems" },
+        { name: "Equipment Tenders", description: "Tendering for industrial machinery" },
+        { name: "Maintenance Tenders", description: "Tender services for regular maintenance" },
+        { name: "Piping Tenders", description: "Tendering for mechanical piping systems" },
+        { name: "Fabrication Tenders", description: "Tender services for custom fabrication" },
+        {name:" And many more...", description: "" }
       ]
     },
     {
-      title: "General Supplies",
-      description: "Procurement and supply of construction materials and equipment",
-      detailedInfo: "Reliable supplier of quality construction materials, tools, and equipment with timely delivery and competitive pricing. We source from trusted manufacturers.",
+      title: "General Supplies Tender",
+      description: "Tendering services for construction materials and equipment",
+      detailedInfo: "We handle procurement tenders for quality construction materials, tools, and equipment. Our services ensure competitive bidding and proper documentation.",
       features: [
-        "Quality materials",
-        "Competitive pricing",
-        "Timely delivery",
-        "Wide range of products",
-        "Bulk discounts available"
+        "Procurement tendering",
+        "Supplier evaluation",
+        "Quality specifications",
+        "Delivery requirements",
+        "Documentation management",
+        "And more..."
       ],
       subServices: [
-        { name: "Material Supply", description: "Quality construction materials delivery" },
-        { name: "Equipment Rental", description: "Construction equipment rental services" },
-        { name: "Tools Supply", description: "Professional-grade construction tools" },
-        { name: "Safety Equipment", description: "Construction safety gear and equipment" }
+        { name: "Material Tenders", description: "Tendering for construction materials" },
+        { name: "Equipment Tenders", description: "Tender services for construction equipment" },
+        { name: "Tools Tenders", description: "Tendering for professional tools" },
+        { name: "Safety Equipment Tenders", description: "Tender services for safety gear" },
+        { name: "Consumables Tenders", description: "Tendering for construction consumables" },
+        { name: "Logistics Tenders", description: "Tender services for supply chain management" },
+        {name:" And many more...", description: "" }
       ]
     }
   ];
 
-  const serviceProvisions = [
+  const serviceProvisionTenders = [
     {
-      title: "Car Hire Services",
-      description: "Reliable vehicle rental for short and long-term needs",
-      detailedInfo: "Fleet of well-maintained vehicles available for hire with flexible rental terms and professional drivers upon request. We offer various vehicle types for different needs.",
+      title: "Car Hire Tender Services",
+      description: "Tendering services for vehicle rental and transport contracts",
+      detailedInfo: "We handle tenders for car hire and transport services, ensuring all requirements for fleet quality, maintenance standards, and service reliability are met.",
       features: [
-        "Well-maintained fleet",
-        "Flexible rental terms",
-        "Professional drivers",
-        "24/7 roadside assistance",
-        "Competitive rates"
+        "Transport tender preparation",
+        "Fleet documentation",
+        "Service level agreements",
+        "Maintenance requirements",
+        "Insurance compliance",
+        "And more..."
       ]
     },
     {
-      title: "Security Services",
-      description: "Comprehensive security solutions for premises and personnel",
-      detailedInfo: "Professional security services including manned guarding, surveillance systems, and security consultancy. Our trained personnel ensure maximum security.",
+      title: "Security Services Tender",
+      description: "Tendering services for security solutions contracts",
+      detailedInfo: "We provide tender services for security contracts including manned guarding, surveillance systems, and security consultancy.",
       features: [
-        "Trained security personnel",
-        "Modern surveillance systems",
-        "24/7 monitoring",
-        "Regular patrols",
-        "Emergency response"
+        "Security tender documentation",
+        "Personnel requirements",
+        "Equipment specifications",
+        "Response protocols",
+        "Compliance verification",
+        "And more..."
+      ],
+    },
+    {
+      title: "Cleaning Services Tender",
+      description: "Tendering services for professional cleaning contracts",
+      detailedInfo: "We handle tenders for commercial and industrial cleaning services, ensuring compliance with cleaning standards and environmental regulations.",
+      features: [
+        "Cleaning tender preparation",
+        "Quality standards",
+        "Environmental compliance",
+        "Equipment requirements",
+        "Staff qualifications",
+        "And more..."
       ]
     },
     {
-      title: "Cleaning Services",
-      description: "Professional cleaning and maintenance services",
-      detailedInfo: "Commercial and industrial cleaning services using eco-friendly products and modern equipment. We provide regular and one-time cleaning services.",
+      title: "Consultancy Tender Services",
+      description: "Tendering services for expert advisory contracts",
+      detailedInfo: "We provide tender services for consultancy contracts in engineering, project management, and business development.",
       features: [
-        "Eco-friendly products",
-        "Modern equipment",
-        "Trained staff",
-        "Flexible scheduling",
-        "Satisfaction guaranteed"
-      ]
-    },
-    {
-      title: "Consultancy",
-      description: "Expert advisory services across multiple sectors",
-      detailedInfo: "Professional consultancy services in engineering, project management, and business development. We provide expert advice and solutions.",
-      features: [
-        "Expert consultants",
-        "Industry experience",
-        "Custom solutions",
-        "Project management",
-        "Cost analysis"
+        "Consultancy tender documentation",
+        "Expert qualifications",
+        "Methodology proposals",
+        "Project references",
+        "Fee structure development",
+        "And more..."
       ]
     }
   ];
 
-  const additionalServices = [
+  const additionalServiceTenders = [
     {
-      title: "Relief Food Supply",
-      description: "Emergency and relief food distribution services",
-      detailedInfo: "Timely delivery of relief food supplies during emergencies with proper storage and distribution networks. We ensure food reaches those in need efficiently.",
+      title: "Relief Food Supply Tender",
+      description: "Tendering services for emergency food distribution contracts",
+      detailedInfo: "We handle tenders for relief food supply contracts, ensuring compliance with food quality standards and distribution requirements.",
       features: [
-        "Timely delivery",
-        "Proper storage",
-        "Quality food items",
-        "Distribution network",
-        "Emergency response"
+        "Food supply tender preparation",
+        "Quality certifications",
+        "Storage requirements",
+        "Distribution logistics",
+        "Emergency response",
+        "Health & safety compliance",
+        "And more..."
       ]
     },
     {
-      title: "Livestock & Cereals Supply",
-      description: "Quality livestock and agricultural produce supply",
-      detailedInfo: "Supply of quality livestock, cereals, and agricultural products from verified sources. We ensure fresh and healthy products.",
+      title: "Livestock & Cereals Tender",
+      description: "Tendering services for agricultural produce supply contracts",
+      detailedInfo: "We provide tender services for livestock and cereals supply contracts, ensuring product quality and supply chain reliability.",
       features: [
-        "Quality livestock",
-        "Fresh cereals",
-        "Verified sources",
-        "Bulk supply",
-        "Delivery services"
+        "Agricultural tender documentation",
+        "Quality verification",
+        "Supply chain management",
+        "Health certifications",
+        "Delivery schedules",
+        "And more..."
       ]
     },
     {
-      title: "Secretarial Duties",
-      description: "Professional documentation and administrative support",
-      detailedInfo: "Comprehensive secretarial services including document preparation, filing, and administrative support. We help businesses stay organized.",
+      title: "Secretarial Tender Services",
+      description: "Tendering services for professional documentation contracts",
+      detailedInfo: "We handle tenders for secretarial services including document preparation, filing, and administrative support contracts.",
       features: [
-        "Document preparation",
-        "Filing services",
-        "Administrative support",
-        "Confidentiality",
-        "Professional staff"
+        "Secretarial tender preparation",
+        "Confidentiality requirements",
+        "Document management",
+        "Service level agreements",
+        "Compliance standards",
+        "And more..."
       ]
     },
     {
-      title: "Company Upkeep Services",
-      description: "Secure document storage and company maintenance",
-      detailedInfo: "Professional upkeep services including document storage, office maintenance, and facility management. We ensure your business runs smoothly.",
+      title: "Company Upkeep Tender Services",
+      description: "Tendering services for document storage and maintenance contracts",
+      detailedInfo: "We provide tender services for company upkeep contracts including document storage, office maintenance, and facility management.",
       features: [
-        "Secure storage",
-        "Office maintenance",
-        "Facility management",
-        "Regular updates",
-        "Professional service"
+        "Upkeep tender documentation",
+        "Storage requirements",
+        "Maintenance standards",
+        "Security protocols",
+        "Service continuity",
+        "And more..."
       ]
     }
   ];
@@ -342,43 +376,36 @@ export default function ServicesPage() {
       <Navbar />
       <main className="bg-gradient-to-br from-gray-50 via-blue-50/20 to-gray-50 pt-16 pb-16 px-4 sm:px-6 relative overflow-hidden">
         
-        {/* Background Objects - More decorative elements */}
+        {/* Background Objects - Exact same as before */}
         <div className="fixed inset-0 pointer-events-none z-0">
-          {/* Large circles */}
           <div className="absolute top-20 left-10 w-64 h-64 bg-blue-100 rounded-full opacity-10"></div>
           <div className="absolute bottom-40 right-10 w-80 h-80 bg-blue-200 rounded-full opacity-5"></div>
-          
-          {/* Geometric shapes */}
           <div className="absolute top-1/3 right-1/4 w-40 h-40 border-4 border-blue-100/20 rounded-lg rotate-45"></div>
           <div className="absolute bottom-1/4 left-1/3 w-32 h-32 border-2 border-blue-200/20 rounded-full"></div>
           
-          {/* Dotted patterns */}
           <div className="absolute top-1/2 left-20 grid grid-cols-3 gap-4 opacity-10">
             {[...Array(9)].map((_, i) => (
               <div key={i} className="w-3 h-3 bg-blue-400 rounded-full"></div>
             ))}
           </div>
           
-          {/* Line patterns */}
           <div className="absolute top-1/4 right-20 w-1 h-48 bg-gradient-to-b from-transparent via-blue-300/20 to-transparent"></div>
           <div className="absolute bottom-1/3 left-20 w-48 h-1 bg-gradient-to-r from-transparent via-blue-300/20 to-transparent"></div>
           
-          {/* Small decorative dots */}
           <div className="absolute top-10 right-40 w-2 h-2 bg-blue-300/30 rounded-full"></div>
           <div className="absolute top-60 left-40 w-3 h-3 bg-blue-400/20 rounded-full"></div>
           <div className="absolute bottom-20 right-60 w-2 h-2 bg-blue-300/30 rounded-full"></div>
           <div className="absolute bottom-60 left-60 w-3 h-3 bg-blue-400/20 rounded-full"></div>
           
-          {/* Wave-like pattern */}
           <div className="absolute -bottom-20 -left-20 w-96 h-96 border-2 border-blue-100/10 rounded-full"></div>
           <div className="absolute -bottom-40 -left-40 w-128 h-128 border-2 border-blue-100/5 rounded-full"></div>
         </div>
 
-        {/* Banner - Keep exactly as is */}
+        {/* Banner - Same visual, updated text */}
         <div className="w-full h-[30vh] sm:h-[40vh] mt-3 overflow-hidden shadow-lg relative z-10">
           <Image
             src="/image1.png"
-            alt="Services banner"
+            alt="Tender Services banner"
             fill
             className="object-cover"
             priority
@@ -386,9 +413,9 @@ export default function ServicesPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-600/50 flex items-center justify-center">
             <div className="text-center text-white px-4">
-              <h1 className="text-3xl sm:text-5xl font-bold mb-4 drop-shadow-lg">Our Comprehensive Services</h1>
+              <h1 className="text-3xl sm:text-5xl font-bold mb-4 drop-shadow-lg">Our Tender Services</h1>
               <p className="text-lg sm:text-xl max-w-2xl mx-auto drop-shadow-md">
-                Professional solutions tailored to your specific needs
+                Professional tender preparation and submission services
               </p>
             </div>
           </div>
@@ -397,20 +424,20 @@ export default function ServicesPage() {
         {/* Services Section */}
         <div className="max-w-7xl mx-auto relative z-10">
           
-          {/* Civil Engineering Section */}
+          {/* Civil Engineering Section - Updated text only */}
           <section className="mt-12 sm:mt-20 relative">
             <div className="text-center mb-10">
               <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
-                Civil Engineering Services
+                Civil Engineering Tender Services
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto text-sm">
-                Professional engineering solutions with precision and excellence
+                Professional tender services for infrastructure projects
               </p>
               <div className="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {civilEngineeringServices.map((service, index) => (
+              {civilEngineeringTenders.map((service, index) => (
                 <div 
                   key={index}
                   className="bg-white rounded-xl shadow p-5 hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-300 group backdrop-blur-sm bg-white/90"
@@ -423,13 +450,13 @@ export default function ServicesPage() {
                       onClick={() => openModal(service, 'details')}
                       className="flex-1 bg-blue-600 text-white px-3 py-1.5 rounded text-xs font-medium hover:bg-blue-700 transition-colors"
                     >
-                      View More
+                      View Tender Details
                     </button>
                     <button
                       onClick={() => openModal(service, 'contact')}
                       className="flex-1 border border-blue-600 text-blue-600 px-3 py-1.5 rounded text-xs font-medium hover:bg-blue-50 transition-colors"
                     >
-                      Get Service
+                      Inquire About Tender
                     </button>
                   </div>
                 </div>
@@ -437,20 +464,20 @@ export default function ServicesPage() {
             </div>
           </section>
 
-          {/* Service Provisions */}
+          {/* Service Provisions - Updated text only */}
           <section className="mt-16 sm:mt-24 relative">
             <div className="text-center mb-10">
               <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
-                Service Provisions
+                Service Provision Tender Services
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto text-sm">
-                Professional support services to keep your operations running smoothly
+                Tender services for support and auxiliary service contracts
               </p>
               <div className="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {serviceProvisions.map((service, index) => (
+              {serviceProvisionTenders.map((service, index) => (
                 <div 
                   key={index}
                   className="bg-white rounded-xl shadow p-5 hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-300 group backdrop-blur-sm bg-white/90"
@@ -463,13 +490,13 @@ export default function ServicesPage() {
                       onClick={() => openModal(service, 'details')}
                       className="flex-1 bg-blue-600 text-white px-3 py-1.5 rounded text-xs font-medium hover:bg-blue-700 transition-colors"
                     >
-                      View More
+                      View Tender Details
                     </button>
                     <button
                       onClick={() => openModal(service, 'contact')}
                       className="flex-1 border border-blue-600 text-blue-600 px-3 py-1.5 rounded text-xs font-medium hover:bg-blue-50 transition-colors"
                     >
-                      Get Service
+                      Inquire About Tender
                     </button>
                   </div>
                 </div>
@@ -477,20 +504,20 @@ export default function ServicesPage() {
             </div>
           </section>
 
-          {/* Additional Services */}
+          {/* Additional Services - Updated text only */}
           <section className="mt-16 sm:mt-24 relative">
             <div className="text-center mb-10">
               <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
-                Additional Services
+                Additional Tender Services
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto text-sm">
-                Specialized services to meet diverse business needs
+                Specialized tender services for diverse business needs
               </p>
               <div className="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {additionalServices.map((service, index) => (
+              {additionalServiceTenders.map((service, index) => (
                 <div 
                   key={index}
                   className="bg-white rounded-xl shadow p-5 hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-300 group backdrop-blur-sm bg-white/90"
@@ -504,13 +531,13 @@ export default function ServicesPage() {
                         onClick={() => openModal(service, 'details')}
                         className="flex-1 bg-blue-600 text-white px-2 py-1 rounded text-xs font-medium hover:bg-blue-700 transition-colors"
                       >
-                        View More
+                        View Tender Details
                       </button>
                       <button
                         onClick={() => openModal(service, 'contact')}
                         className="flex-1 border border-blue-600 text-blue-600 px-2 py-1 rounded text-xs font-medium hover:bg-blue-50 transition-colors"
                       >
-                        Get Service
+                        Inquire About Tender
                       </button>
                     </div>
                   </div>
@@ -519,9 +546,8 @@ export default function ServicesPage() {
             </div>
           </section>
 
-          {/* CTA Section */}
+          {/* CTA Section - Updated text only */}
           <section className="mt-16 sm:mt-24 bg-gradient-to-r from-blue-900 to-blue-700 rounded-2xl p-6 sm:p-10 text-center text-white shadow-xl backdrop-blur-sm bg-blue-900/90 relative overflow-hidden">
-            {/* Background pattern for CTA */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 left-0 w-32 h-32 border-2 border-white rounded-full"></div>
               <div className="absolute bottom-0 right-0 w-40 h-40 border-2 border-white rounded-full"></div>
@@ -529,23 +555,23 @@ export default function ServicesPage() {
             
             <div className="relative z-10">
               <h2 className="text-xl sm:text-2xl font-bold mb-3">
-                Need Custom Solutions?
+                Need Tender Assistance?
               </h2>
               <p className="text-blue-100 max-w-2xl mx-auto mb-4 text-sm">
-                We provide tailored services to meet your unique requirements. Contact us for personalized solutions.
+                We provide professional tender preparation and submission services. Contact us for expert tender support.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   href="/contact"
                   className="bg-white text-blue-900 font-bold px-6 py-2 rounded text-sm hover:bg-blue-50 transition-colors shadow hover:shadow-md"
                 >
-                  Request Consultation
+                  Request Tender Support
                 </Link>
                 <a
                   href="tel:+254725798258"
                   className="border border-white text-white font-bold px-6 py-2 rounded text-sm hover:bg-white/10 transition-colors"
                 >
-                  Call Now
+                  Call for Tender Inquiries
                 </a>
               </div>
             </div>
