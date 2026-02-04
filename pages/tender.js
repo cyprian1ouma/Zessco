@@ -315,7 +315,7 @@ export default function ServicesPage() {
     }
   ];
 
-  const additionalServiceTenders = [
+  const additionalServices = [
     {
       title: "Relief Food Supply Tender",
       description: "Tendering services for emergency food distribution contracts",
@@ -325,9 +325,7 @@ export default function ServicesPage() {
         "Quality certifications",
         "Storage requirements",
         "Distribution logistics",
-        "Emergency response",
-        "Health & safety compliance",
-        "And more..."
+        "Emergency response"
       ]
     },
     {
@@ -339,34 +337,38 @@ export default function ServicesPage() {
         "Quality verification",
         "Supply chain management",
         "Health certifications",
-        "Delivery schedules",
-        "And more..."
+        "Delivery schedules"
       ]
     },
     {
-      title: "Secretarial Tender Services",
-      description: "Tendering services for professional documentation contracts",
-      detailedInfo: "We handle tenders for secretarial services including document preparation, filing, and administrative support contracts.",
+      title: "Secretarial Services",
+      description: "Professional documentation and administrative support",
+      detailedInfo: "We provide comprehensive secretarial services including document preparation, filing, administrative support, and company upkeep. Our professional team ensures efficient office operations and proper documentation management.",
       features: [
-        "Secretarial tender preparation",
-        "Confidentiality requirements",
-        "Document management",
-        "Service level agreements",
-        "Compliance standards",
-        "And more..."
-      ]
-    },
-    {
-      title: "Company Upkeep Tender Services",
-      description: "Tendering services for document storage and maintenance contracts",
-      detailedInfo: "We provide tender services for company upkeep contracts including document storage, office maintenance, and facility management.",
-      features: [
-        "Upkeep tender documentation",
-        "Storage requirements",
-        "Maintenance standards",
-        "Security protocols",
-        "Service continuity",
-        "And more..."
+        "Document preparation and filing",
+        "Administrative support",
+        "Company record keeping",
+        "Office upkeep and maintenance",
+        "Confidentiality assurance",
+        "Meeting coordination"
+      ],
+      subServices: [
+        { 
+          name: "Document Management", 
+          description: "Professional document preparation, filing, and archival services" 
+        },
+        { 
+          name: "Administrative Support", 
+          description: "Day-to-day administrative duties and office coordination" 
+        },
+        { 
+          name: "Company Upkeep", 
+          description: "Office maintenance and facility management services" 
+        },
+        { 
+          name: "Records Management", 
+          description: "Organized records storage and retrieval systems" 
+        }
       ]
     }
   ];
@@ -504,20 +506,20 @@ export default function ServicesPage() {
             </div>
           </section>
 
-          {/* Additional Services - Updated text only */}
+         {/* Additional Services Section */}
           <section className="mt-16 sm:mt-24 relative">
             <div className="text-center mb-10">
               <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
-                Additional Tender Services
+                Additional Services
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto text-sm">
-                Specialized tender services for diverse business needs
+                Specialized tender and support services for diverse business needs
               </p>
               <div className="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {additionalServiceTenders.map((service, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {additionalServices.map((service, index) => (
                 <div 
                   key={index}
                   className="bg-white rounded-xl shadow p-5 hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-300 group backdrop-blur-sm bg-white/90"
@@ -527,18 +529,37 @@ export default function ServicesPage() {
                     <p className="text-gray-600 text-xs mb-3 flex-grow">{service.description}</p>
                     
                     <div className="flex gap-2 mt-2">
-                      <button
-                        onClick={() => openModal(service, 'details')}
-                        className="flex-1 bg-blue-600 text-white px-2 py-1 rounded text-xs font-medium hover:bg-blue-700 transition-colors"
-                      >
-                        View Tender Details
-                      </button>
-                      <button
-                        onClick={() => openModal(service, 'contact')}
-                        className="flex-1 border border-blue-600 text-blue-600 px-2 py-1 rounded text-xs font-medium hover:bg-blue-50 transition-colors"
-                      >
-                        Inquire About Tender
-                      </button>
+                      {service.title === "Secretarial Services" ? (
+                        <>
+                          <button
+                            onClick={() => openModal(service, 'details')}
+                            className="flex-1 bg-blue-600 text-white px-2 py-1 rounded text-xs font-medium hover:bg-blue-700 transition-colors"
+                          >
+                            View Details
+                          </button>
+                          <button
+                            onClick={() => openModal(service, 'contact')}
+                            className="flex-1 border border-blue-600 text-blue-600 px-2 py-1 rounded text-xs font-medium hover:bg-blue-50 transition-colors"
+                          >
+                            Inquire More
+                          </button>
+                        </>
+                      ) : (
+                        <>
+                          <button
+                            onClick={() => openModal(service, 'details')}
+                            className="flex-1 bg-blue-600 text-white px-2 py-1 rounded text-xs font-medium hover:bg-blue-700 transition-colors"
+                          >
+                            View Tender Details
+                          </button>
+                          <button
+                            onClick={() => openModal(service, 'contact')}
+                            className="flex-1 border border-blue-600 text-blue-600 px-2 py-1 rounded text-xs font-medium hover:bg-blue-50 transition-colors"
+                          >
+                            Inquire About Tender
+                          </button>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
