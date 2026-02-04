@@ -256,9 +256,14 @@ export default function Home() {
             <Link href="/tender" className="bg-blue-900 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-blue-800 transition font-semibold text-sm sm:text-base">
               Start My Tender
             </Link>
-            <Link href="/whatsapp" className="bg-green-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-green-600 transition font-semibold text-sm sm:text-base">
-              Chat on WhatsApp
-            </Link>
+            <Link 
+                href="https://wa.me/254724210375?text=Hello%20Zessco%20Ltd,%20I%20am%20interested%20in%20your%20services" 
+                className="bg-green-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-green-600 transition font-semibold text-sm sm:text-base"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Chat on WhatsApp
+              </Link>
             <Link href="/contact" className="bg-white text-blue-900 border border-blue-900 px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-blue-50 transition font-semibold text-sm sm:text-base">
               Request Call Back
             </Link>
@@ -268,7 +273,7 @@ export default function Home() {
         {/* Our Services Section */}
         <section className="max-w-7xl mx-auto px-4 py-12 sm:py-16">
           <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 text-center mb-8 sm:mb-10">Other Services</h2>
-          <div className="space-y-6 sm:space-y-10">
+          <div className="space-y-2 sm:space-y-10">
           {[
               {
                 service: '1. Tender Documentation',
@@ -308,15 +313,15 @@ export default function Home() {
                 key={index}
                 className="group grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 items-start transition duration-300"
               >
-                <h2 className="text-lg sm:text-xl font-semibold text-blue-900 p-3 sm:p-4 border rounded-md shadow-sm 
+                <h2 className="text-lg sm:text-base font-semibold text-blue-900 p-3 sm:p-4 border rounded-md shadow-sm mt-4 pt-4 
                                 group-hover:shadow-md group-hover:border-blue-400 
-                                group-hover:text-2xl group-hover:bg-blue-900 group-hover:text-white
+                                group-hover:text-sm group-hover:bg-blue-900 group-hover:text-white
                                 transition-all duration-500 ease-in-out">
                   {item.service}
                 </h2>
                 <p className="text-sm sm:text-base text-gray-700 p-3 sm:p-4 border rounded-md 
                             group-hover:bg-orange-50 group-hover:shadow-sm group-hover:border-orange-300 
-                            transition duration-500 ease-in-out">
+                            transition duration-500 ease-in-out group-hover:text-sm">
                   {item.description}
                 </p>
               </div>

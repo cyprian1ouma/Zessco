@@ -10,6 +10,7 @@ import {
   FaPhone,
   FaChair,
   FaArrowUp,
+  FaTiktok
 } from 'react-icons/fa';
 
 export default function Footer() {
@@ -93,19 +94,24 @@ export default function Footer() {
           </div>
 
           <div className="order-1 md:order-2 flex gap-3 text-white text-lg mb-4 md:mb-0">
-            <a href="#" className="hover:scale-125 hover:text-green-400 transition duration-300">
-              <FaWhatsapp />
-            </a>
-            <a href="#" className="hover:scale-125 hover:text-blue-400 transition duration-300">
+          <a href="https://wa.me/254725798258?text=Hello%20Zessco%20International%20Consultancy,%20I%20would%20like%20to%20inquire%20about%20your%20Services" 
+            className="hover:scale-125 hover:text-green-400 transition duration-300">
+            <FaWhatsapp />
+          </a>
+            <a href="https://www.fb.com/l/6lp1kJRRR" className="hover:scale-125 hover:text-blue-400 transition duration-300">
               <FaFacebookF />
+            </a>
+
+            <a href="https://www.tiktok.com/@zessco.internatio?_r=1&_t=ZS-93dgrrrdPzl" className="hover:scale-125 hover:text-[#ff0050] transition duration-300">
+              <FaTiktok />
             </a>
             <a href="#" className="hover:scale-125 hover:text-blue-300 transition duration-300">
               <FaTwitter />
             </a>
-            <a href="#" className="hover:scale-125 hover:text-red-400 transition duration-300">
+            <a href="https://www.zesscointernational.com/" className="hover:scale-125 hover:text-red-400 transition duration-300">
               <FaGoogle />
             </a>
-            <a href="#" className="hover:scale-125 hover:text-pink-400 transition duration-300">
+            <a href="https://www.instagram.com/zesscointlltd?igsh=bDR6aWNtNWJmdDE2" className="hover:scale-125 hover:text-pink-400 transition duration-300">
               <FaInstagram />
             </a>
           </div>
