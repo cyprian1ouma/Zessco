@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link"; // Added import
 
 const ServiceModal = ({ service, isOpen, onClose, type }) => {
   if (!isOpen || !service) return null;
@@ -54,12 +55,12 @@ const ServiceModal = ({ service, isOpen, onClose, type }) => {
               )}
               
               <div className="mt-6 pt-4 border-t">
-                <a
+                <Link
                   href="/contact"
                   className="inline-block bg-blue-600 text-white px-3 py-1.5 rounded text-xs font-semibold hover:bg-blue-700 transition-colors"
                 >
                   Contact Us
-                </a>
+                </Link>
               </div>
             </div>
           ) : (
@@ -534,14 +535,14 @@ export default function ServicesPage() {
                 We provide tailored services to meet your unique requirements. Contact us for personalized solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <a
+                <Link
                   href="/contact"
                   className="bg-white text-blue-900 font-bold px-6 py-2 rounded text-sm hover:bg-blue-50 transition-colors shadow hover:shadow-md"
                 >
                   Request Consultation
-                </a>
+                </Link>
                 <a
-                  href="tel:+254700123456"
+                  href="tel:+254725798258"
                   className="border border-white text-white font-bold px-6 py-2 rounded text-sm hover:bg-white/10 transition-colors"
                 >
                   Call Now
