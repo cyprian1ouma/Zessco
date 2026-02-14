@@ -57,7 +57,7 @@ export default function Home() {
         {/* Info Boxes Section */}
         <section className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto py-8 sm:py-12 text-center">
           <div className="bg-white shadow-md p-3 sm:p-6 rounded transition duration-500 hover:bg-orange-500 hover:text-white hover:scale-105 text-sm sm:text-lg font-semibold">
-            Open at 8:00am <br />Close at 4:00pm
+            Open at 8:00am <br />Close at 5:00pm
           </div>
           <div className="bg-white shadow-md p-3 sm:p-6 rounded transition duration-500 hover:bg-orange-500 hover:text-white hover:scale-105 text-sm sm:text-lg font-semibold">
             From: Monday <br />To: Friday

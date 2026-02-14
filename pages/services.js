@@ -3,18 +3,18 @@ import Footer from '../components/Footer';
 
 export default function Services() {
   const services = [
-    { title: "Tender Documentation", desc: "Worldwide freight via air, land, and sea.", icon: "🚚" },
-    { title: "Technical Input (Engineering/Specs)", desc: "Secure storage with real-time inventory tracking.", icon: "🏢" },
-    { title: "Legal Review & Compliance (Advocates)", desc: "We handle complex import/export documentation.", icon: "📄" },
-    { title: "Financial Audits & Statements (CPA Auditors)", desc: "Reliable delivery right to your customer's door.", icon: "📦" },
-    { title: "Formatting to Tender Standards", desc: "Your goods are always protected.", icon: "🛡️" },
-    { title: "Tender Submission & Delivery Support", desc: "Live GPS tracking for your shipments.", icon: "📍" },
-    { title: "Aftercare: KRA, Trend Updates, Feedback", desc: "Refrigerated shipping for sensitive cargo.", icon: "❄️" },
-    { title: "Bid compilation", desc: "Maintain, track, and optimize your vehicles.", icon: "🚛" },
-    { title: "Filling of Bill of Quantities", desc: "Streamline and improve your operations.", icon: "📊" },
-    { title: "Preparation of Audited Accounts", desc: "Real-time control over your stock.", icon: "📦" },
-    { title: "Online E.G.P tendering services", desc: "Powerful tools to automate logistics tasks.", icon: "💻" },
-    { title: "Graphic Design", desc: "Always available when you need us.", icon: "🕒" },
+    { title: "Tender Documentation" },
+    // { title: "Technical Input (Engineering/Specs)"},
+    { title: "Compliance Reviews & Certifications"},
+    { title: "Financial Audits & Statements (CPA Auditors)"},
+    // { title: "Bidder Registration & Prequalification"},
+    { title: "ISMIF & EGP Tender Submission"},
+    { title: "KRA, Return and Updates, Feedback"},
+    // { title: "Bid compilation"},
+    { title: "Filling of Bill of Quantities"},
+    { title: "Preparation of Audited Accounts"},
+    { title: "Online E.G.P tendering services"},
+    { title: "Graphic Design"},
   ];
 
   return (
