@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   FaFacebookF,
   FaWhatsapp,
@@ -28,7 +29,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Company Info */}
           <div className="px-2 sm:px-0">
-            <h6 className="uppercase font-bold mb-4 text-lg">Zessco International Consultancy</h6>
+            <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
+              {/* Logo */}
+              <div className="relative w-12 h-12 flex-shrink-0">
+                <Image
+                  src="/image1.png"
+                  alt="Zessco International Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-4xl shadow-lg"
+                />
+              </div>
+              <h6 className="font-bold text-sm">Zessco International Consultancy</h6>
+            </div>
             <p className="text-sm sm:text-base">
               Organizing your Tender Application with trust and simplicity. Experience
               seamless freight and delivery solutions.
@@ -89,8 +102,10 @@ export default function Footer() {
 
         {/* Bottom Row: Copyright + Social */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <div className="order-2 md:order-1 text-sm sm:text-base">
-            © {new Date().getFullYear()} Zessco International Consultancy. All rights reserved.
+          <div className="order-2 md:order-1 text-sm sm:text-base flex items-center gap-2">
+            <span>© {new Date().getFullYear()}</span>
+            <span>Zessco International Consultancy.</span>
+            <span>All rights reserved.</span>
           </div>
 
           <div className="order-1 md:order-2 flex gap-3 text-white text-lg mb-4 md:mb-0">
