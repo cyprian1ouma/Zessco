@@ -457,10 +457,10 @@ export default function Services() {
       accent: 'blue'
     },
     registration: {
-      bg: 'bg-gradient-to-br from-amber-50 to-yellow-50',
-      header: 'bg-gradient-to-r from-amber-600 to-yellow-600',
-      button: 'bg-amber-600 hover:bg-amber-700',
-      accent: 'amber'
+      bg: 'bg-gradient-to-br from-blue-50 to-blue-300',
+      header: 'bg-gradient-to-r from-blue-600 to-blue-600',
+      button: 'bg-blue-600 hover:bg-blue-700',
+      accent: 'blue'
     },
     financial: {
       bg: 'bg-gradient-to-br from-emerald-50 to-green-50',
@@ -475,10 +475,10 @@ export default function Services() {
       accent: 'purple'
     },
     company: {
-      bg: 'bg-gradient-to-br from-rose-50 to-red-50',
-      header: 'bg-gradient-to-r from-rose-600 to-red-600',
-      button: 'bg-rose-600 hover:bg-rose-700',
-      accent: 'rose'
+      bg: 'bg-gradient-to-br from-yellow-300 to-yellow-300',
+      header: 'bg-gradient-to-r from-yellow-600 to-yellow-600',
+      button: 'bg-yellow-600 hover:bg-yellow-700',
+      accent: 'yellow'
     },
     other: {
       bg: 'bg-gradient-to-br from-teal-50 to-cyan-50',
@@ -582,7 +582,7 @@ export default function Services() {
             </button>
             <button
               onClick={() => scrollToSection('registration-services')}
-              className="px-5 py-2.5 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition text-sm font-medium shadow-sm"
+              className="px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm font-medium shadow-sm"
             >
               Registration
             </button>
@@ -600,7 +600,7 @@ export default function Services() {
             </button>
             <button
               onClick={() => scrollToSection('company-services')}
-              className="px-5 py-2.5 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition text-sm font-medium shadow-sm"
+              className="px-5 py-2.5 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition text-sm font-medium shadow-sm"
             >
               Company Secretarial
             </button>
@@ -617,10 +617,10 @@ export default function Services() {
                     ? category.id === 'all' 
                       ? 'bg-gray-900 text-white shadow-md'
                       : category.id === 'tender' ? 'bg-blue-600 text-white shadow-md'
-                      : category.id === 'registration' ? 'bg-amber-600 text-white shadow-md'
+                      : category.id === 'registration' ? 'bg-blue-600 text-white shadow-md'
                       : category.id === 'financial' ? 'bg-emerald-600 text-white shadow-md'
                       : category.id === 'digital' ? 'bg-purple-600 text-white shadow-md'
-                      : category.id === 'company' ? 'bg-rose-600 text-white shadow-md'
+                      : category.id === 'company' ? 'bg-yellow-600 text-white shadow-md'
                       : 'bg-teal-600 text-white shadow-md'
                     : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-100'
                 }`}
@@ -672,7 +672,7 @@ export default function Services() {
           {/* REGISTRATION SERVICES SECTION */}
           {(activeCategory === 'all' || activeCategory === 'registration') && (
             <div id="registration-services" className="mb-16">
-              <div className={`${sectionColors.registration.bg} rounded-3xl p-8 border border-amber-200 shadow-lg`}>
+              <div className={`${sectionColors.registration.bg} rounded-3xl p-8 border border-blue-200 shadow-lg`}>
                 <div className="flex items-center gap-3 mb-8">
                   <div className={`w-12 h-12 ${sectionColors.registration.header} rounded-2xl flex items-center justify-center shadow-md`}>
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -762,7 +762,7 @@ export default function Services() {
           {/* COMPANY SECRETARIAL SECTION */}
           {(activeCategory === 'all' || activeCategory === 'company') && (
             <div id="company-services" className="mb-16">
-              <div className={`${sectionColors.company.bg} rounded-3xl p-8 border border-rose-200 shadow-lg`}>
+              <div className={`${sectionColors.company.bg} rounded-3xl p-8 border border-yellow-200 shadow-lg`}>
                 <div className="flex items-center gap-3 mb-8">
                   <div className={`w-12 h-12 ${sectionColors.company.header} rounded-2xl flex items-center justify-center shadow-md`}>
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -771,7 +771,7 @@ export default function Services() {
                   </div>
                   <div>
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Company Secretarial</h2>
-                    <p className="text-rose-700">Expert corporate governance support</p>
+                    <p className="text-yellow-700">Expert corporate governance support</p>
                   </div>
                 </div>
 
