@@ -18,7 +18,7 @@ export default function Services() {
   ];
 
   const services = [
-    // TENDER SERVICES (Background different)
+    // TENDER SERVICES
     { 
       id: 1,
       title: "Bid Compilation", 
@@ -440,13 +440,53 @@ export default function Services() {
     ? services 
     : services.filter(service => service.category === activeCategory);
 
-  // Group services by category for better organization
+  // Group services by category
   const tenderServices = services.filter(s => s.category === 'tender');
   const registrationServices = services.filter(s => s.category === 'registration');
   const financialServices = services.filter(s => s.category === 'financial');
   const digitalServices = services.filter(s => s.category === 'digital');
   const companyServices = services.filter(s => s.category === 'company');
   const otherServices = services.filter(s => s.category === 'other');
+
+  // Color schemes for different sections
+  const sectionColors = {
+    tender: {
+      bg: 'bg-gradient-to-br from-gray-50 to-blue-50',
+      header: 'bg-gradient-to-r from-blue-600 to-blue-700',
+      button: 'bg-blue-600 hover:bg-blue-700',
+      accent: 'blue'
+    },
+    registration: {
+      bg: 'bg-gradient-to-br from-amber-50 to-yellow-50',
+      header: 'bg-gradient-to-r from-amber-600 to-yellow-600',
+      button: 'bg-amber-600 hover:bg-amber-700',
+      accent: 'amber'
+    },
+    financial: {
+      bg: 'bg-gradient-to-br from-emerald-50 to-green-50',
+      header: 'bg-gradient-to-r from-emerald-600 to-green-600',
+      button: 'bg-emerald-600 hover:bg-emerald-700',
+      accent: 'emerald'
+    },
+    digital: {
+      bg: 'bg-gradient-to-br from-purple-50 to-indigo-50',
+      header: 'bg-gradient-to-r from-purple-600 to-indigo-600',
+      button: 'bg-purple-600 hover:bg-purple-700',
+      accent: 'purple'
+    },
+    company: {
+      bg: 'bg-gradient-to-br from-rose-50 to-red-50',
+      header: 'bg-gradient-to-r from-rose-600 to-red-600',
+      button: 'bg-rose-600 hover:bg-rose-700',
+      accent: 'rose'
+    },
+    other: {
+      bg: 'bg-gradient-to-br from-teal-50 to-cyan-50',
+      header: 'bg-gradient-to-r from-teal-600 to-cyan-600',
+      button: 'bg-teal-600 hover:bg-teal-700',
+      accent: 'teal'
+    }
+  };
 
   const openModal = (service) => {
     setSelectedService(service);
@@ -460,7 +500,6 @@ export default function Services() {
     document.body.style.overflow = 'unset';
   };
 
-  // Scroll to section function
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -473,7 +512,7 @@ export default function Services() {
       <Navbar />
       <main className="bg-gray-50 min-h-screen pt-16 pb-16 px-4 sm:px-6 mt-20">
         <div className="max-w-7xl mx-auto">
-          {/* Header with Company Info */}
+          {/* Header Section */}
           <div className="bg-white rounded-2xl shadow-sm p-8 mb-10 border border-gray-100">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
               <div>
@@ -483,13 +522,13 @@ export default function Services() {
                 <p className="text-gray-600 text-lg max-w-3xl">
                   Zessco International Consultancy offers comprehensive, efficient, and dependable services tailored to your supply chain needs.
                 </p>
-                <div className="w-24 h-1 bg-gray-800 mt-4"></div>
+                <div className="w-24 h-1 bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600 mt-4"></div>
               </div>
               
               {/* Company Contact Card */}
-              <div className="bg-gray-50 rounded-xl p-5 border border-gray-200 min-w-[300px]">
+              <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-5 border border-gray-200 min-w-[300px] shadow-sm">
                 <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                  <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                   Zessco International
@@ -513,13 +552,13 @@ export default function Services() {
                   </p>
                   <div className="border-t border-gray-200 my-3 pt-3">
                     <p className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                       <span className="font-semibold text-gray-900">+254 724 210375</span>
                     </p>
                     <p className="flex items-center gap-2 mt-1">
-                      <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                       <span className="text-gray-700">info@zesscointernational.com</span>
@@ -534,7 +573,7 @@ export default function Services() {
           <div className="flex flex-wrap gap-3 mb-8">
             <button
               onClick={() => scrollToSection('tender-services')}
-              className="px-5 py-2.5 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition text-sm font-medium flex items-center gap-2"
+              className="px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm font-medium flex items-center gap-2 shadow-sm"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -543,25 +582,25 @@ export default function Services() {
             </button>
             <button
               onClick={() => scrollToSection('registration-services')}
-              className="px-5 py-2.5 bg-white border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition text-sm font-medium"
+              className="px-5 py-2.5 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition text-sm font-medium shadow-sm"
             >
               Registration
             </button>
             <button
               onClick={() => scrollToSection('financial-services')}
-              className="px-5 py-2.5 bg-white border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition text-sm font-medium"
+              className="px-5 py-2.5 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition text-sm font-medium shadow-sm"
             >
               Financial Services
             </button>
             <button
               onClick={() => scrollToSection('digital-services')}
-              className="px-5 py-2.5 bg-white border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition text-sm font-medium"
+              className="px-5 py-2.5 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition text-sm font-medium shadow-sm"
             >
               Digital Services
             </button>
             <button
               onClick={() => scrollToSection('company-services')}
-              className="px-5 py-2.5 bg-white border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition text-sm font-medium"
+              className="px-5 py-2.5 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition text-sm font-medium shadow-sm"
             >
               Company Secretarial
             </button>
@@ -575,13 +614,24 @@ export default function Services() {
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
                   activeCategory === category.id
-                    ? 'bg-gray-900 text-white shadow-md'
+                    ? category.id === 'all' 
+                      ? 'bg-gray-900 text-white shadow-md'
+                      : category.id === 'tender' ? 'bg-blue-600 text-white shadow-md'
+                      : category.id === 'registration' ? 'bg-amber-600 text-white shadow-md'
+                      : category.id === 'financial' ? 'bg-emerald-600 text-white shadow-md'
+                      : category.id === 'digital' ? 'bg-purple-600 text-white shadow-md'
+                      : category.id === 'company' ? 'bg-rose-600 text-white shadow-md'
+                      : 'bg-teal-600 text-white shadow-md'
                     : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-100'
                 }`}
               >
                 {category.name}
                 {category.id !== 'all' && (
-                  <span className="ml-2 text-xs bg-gray-200 px-2 py-0.5 rounded-full">
+                  <span className={`ml-2 text-xs px-2 py-0.5 rounded-full ${
+                    activeCategory === category.id
+                      ? 'bg-white bg-opacity-20'
+                      : 'bg-gray-200'
+                  }`}>
                     {services.filter(s => s.category === category.id).length}
                   </span>
                 )}
@@ -589,19 +639,19 @@ export default function Services() {
             ))}
           </div>
 
-          {/* TENDER SERVICES SECTION - Special Background */}
+          {/* TENDER SERVICES SECTION */}
           {(activeCategory === 'all' || activeCategory === 'tender') && (
             <div id="tender-services" className="mb-16">
-              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 border border-gray-200 shadow-inner">
+              <div className={`${sectionColors.tender.bg} rounded-3xl p-8 border border-blue-200 shadow-lg`}>
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-12 h-12 bg-gray-800 rounded-2xl flex items-center justify-center">
+                  <div className={`w-12 h-12 ${sectionColors.tender.header} rounded-2xl flex items-center justify-center shadow-md`}>
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
                   <div>
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Tender Services</h2>
-                    <p className="text-gray-600">Complete tender support from documentation to submission</p>
+                    <p className="text-blue-700">Complete tender support from documentation to submission</p>
                   </div>
                 </div>
 
@@ -611,7 +661,7 @@ export default function Services() {
                       key={service.id} 
                       service={service} 
                       openModal={openModal}
-                      variant="tender"
+                      colorScheme={sectionColors.tender}
                     />
                   ))}
                 </div>
@@ -622,16 +672,29 @@ export default function Services() {
           {/* REGISTRATION SERVICES SECTION */}
           {(activeCategory === 'all' || activeCategory === 'registration') && (
             <div id="registration-services" className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-                Registration Services
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {registrationServices.map((service) => (
-                  <ServiceCard key={service.id} service={service} openModal={openModal} />
-                ))}
+              <div className={`${sectionColors.registration.bg} rounded-3xl p-8 border border-amber-200 shadow-lg`}>
+                <div className="flex items-center gap-3 mb-8">
+                  <div className={`w-12 h-12 ${sectionColors.registration.header} rounded-2xl flex items-center justify-center shadow-md`}>
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Registration Services</h2>
+                    <p className="text-amber-700">Get your business officially registered</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {registrationServices.map((service) => (
+                    <ServiceCard 
+                      key={service.id} 
+                      service={service} 
+                      openModal={openModal}
+                      colorScheme={sectionColors.registration}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           )}
@@ -639,16 +702,29 @@ export default function Services() {
           {/* FINANCIAL SERVICES SECTION */}
           {(activeCategory === 'all' || activeCategory === 'financial') && (
             <div id="financial-services" className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Financial Services
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {financialServices.map((service) => (
-                  <ServiceCard key={service.id} service={service} openModal={openModal} />
-                ))}
+              <div className={`${sectionColors.financial.bg} rounded-3xl p-8 border border-emerald-200 shadow-lg`}>
+                <div className="flex items-center gap-3 mb-8">
+                  <div className={`w-12 h-12 ${sectionColors.financial.header} rounded-2xl flex items-center justify-center shadow-md`}>
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Financial Services</h2>
+                    <p className="text-emerald-700">Professional financial management solutions</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {financialServices.map((service) => (
+                    <ServiceCard 
+                      key={service.id} 
+                      service={service} 
+                      openModal={openModal}
+                      colorScheme={sectionColors.financial}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           )}
@@ -656,16 +732,29 @@ export default function Services() {
           {/* DIGITAL SERVICES SECTION */}
           {(activeCategory === 'all' || activeCategory === 'digital') && (
             <div id="digital-services" className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                Digital Services
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {digitalServices.map((service) => (
-                  <ServiceCard key={service.id} service={service} openModal={openModal} />
-                ))}
+              <div className={`${sectionColors.digital.bg} rounded-3xl p-8 border border-purple-200 shadow-lg`}>
+                <div className="flex items-center gap-3 mb-8">
+                  <div className={`w-12 h-12 ${sectionColors.digital.header} rounded-2xl flex items-center justify-center shadow-md`}>
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Digital Services</h2>
+                    <p className="text-purple-700">Modern digital solutions for your business</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {digitalServices.map((service) => (
+                    <ServiceCard 
+                      key={service.id} 
+                      service={service} 
+                      openModal={openModal}
+                      colorScheme={sectionColors.digital}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           )}
@@ -673,16 +762,29 @@ export default function Services() {
           {/* COMPANY SECRETARIAL SECTION */}
           {(activeCategory === 'all' || activeCategory === 'company') && (
             <div id="company-services" className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-                Company Secretarial
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {companyServices.map((service) => (
-                  <ServiceCard key={service.id} service={service} openModal={openModal} />
-                ))}
+              <div className={`${sectionColors.company.bg} rounded-3xl p-8 border border-rose-200 shadow-lg`}>
+                <div className="flex items-center gap-3 mb-8">
+                  <div className={`w-12 h-12 ${sectionColors.company.header} rounded-2xl flex items-center justify-center shadow-md`}>
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Company Secretarial</h2>
+                    <p className="text-rose-700">Expert corporate governance support</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {companyServices.map((service) => (
+                    <ServiceCard 
+                      key={service.id} 
+                      service={service} 
+                      openModal={openModal}
+                      colorScheme={sectionColors.company}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           )}
@@ -690,23 +792,36 @@ export default function Services() {
           {/* OTHER SERVICES SECTION */}
           {(activeCategory === 'all' || activeCategory === 'other') && (
             <div id="other-services" className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                </svg>
-                Business Support Services
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {otherServices.map((service) => (
-                  <ServiceCard key={service.id} service={service} openModal={openModal} />
-                ))}
+              <div className={`${sectionColors.other.bg} rounded-3xl p-8 border border-teal-200 shadow-lg`}>
+                <div className="flex items-center gap-3 mb-8">
+                  <div className={`w-12 h-12 ${sectionColors.other.header} rounded-2xl flex items-center justify-center shadow-md`}>
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Business Support Services</h2>
+                    <p className="text-teal-700">Additional services to support your business</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {otherServices.map((service) => (
+                    <ServiceCard 
+                      key={service.id} 
+                      service={service} 
+                      openModal={openModal}
+                      colorScheme={sectionColors.other}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           )}
 
           {/* Support Note */}
           <div className="text-center mt-16">
-            <div className="inline-block bg-gray-100 rounded-lg px-6 py-4">
+            <div className="inline-block bg-gradient-to-r from-blue-50 via-amber-50 to-emerald-50 rounded-lg px-6 py-4 border border-gray-200">
               <p className="text-gray-700">
                 <span className="font-semibold">24/7 Support:</span> Always available when you need us
               </p>
@@ -720,7 +835,11 @@ export default function Services() {
 
       {/* Service Details Modal */}
       {isModalOpen && selectedService && (
-        <ServiceModal service={selectedService} closeModal={closeModal} />
+        <ServiceModal 
+          service={selectedService} 
+          closeModal={closeModal} 
+          colorScheme={sectionColors[selectedService.category] || sectionColors.other}
+        />
       )}
 
       <Footer />
@@ -729,25 +848,17 @@ export default function Services() {
 }
 
 // Service Card Component
-function ServiceCard({ service, openModal, variant = 'normal' }) {
+function ServiceCard({ service, openModal, colorScheme }) {
   return (
     <div 
-      className={`rounded-xl border p-6 flex flex-col hover:shadow-md transition-all duration-300 ${
-        variant === 'tender' 
-          ? 'bg-white border-gray-300 hover:border-gray-800 hover:shadow-lg' 
-          : 'bg-white border-gray-100 hover:border-gray-300'
-      }`}
+      className="bg-white rounded-xl border-2 p-6 flex flex-col hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+      style={{ borderColor: colorScheme ? `var(--${colorScheme.accent}-200)` : '#e5e7eb' }}
     >
       <div className="flex-grow">
-        {variant === 'tender' && (
-          <span className="inline-block px-3 py-1 bg-gray-800 text-white text-xs font-medium rounded-full mb-3">
-            Tender Service
-          </span>
-        )}
-        <span className="text-xs font-medium text-gray-500 uppercase tracking-wider">
+        <div className={`inline-block px-3 py-1 ${colorScheme.header} text-white text-xs font-medium rounded-full mb-3 shadow-sm`}>
           {service.categoryName}
-        </span>
-        <h2 className="text-xl font-semibold text-gray-900 mt-2 mb-3">
+        </div>
+        <h2 className="text-xl font-semibold text-gray-900 mt-2 mb-3 line-clamp-2">
           {service.title}
         </h2>
         <p className="text-gray-600 text-sm line-clamp-3 mb-4">
@@ -757,20 +868,24 @@ function ServiceCard({ service, openModal, variant = 'normal' }) {
         {/* Price Preview */}
         <div className="mb-4">
           <span className="text-sm font-medium text-gray-700">Starting from: </span>
-          <span className="text-lg font-bold text-gray-900">
+          <span className={`text-lg font-bold`} style={{ color: colorScheme ? `var(--${colorScheme.accent}-600)` : '#111827' }}>
             KES {service.charges[0]?.amount.includes('Depends') ? 'Varies' : service.charges[0]?.amount}
           </span>
+        </div>
+
+        {/* Timeline Badge */}
+        <div className="flex items-center gap-1 text-xs text-gray-500">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>{service.timeline}</span>
         </div>
       </div>
 
       {/* View Details Button */}
       <button
         onClick={() => openModal(service)}
-        className={`w-full mt-4 px-4 py-3 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm font-medium ${
-          variant === 'tender'
-            ? 'bg-gray-900 text-white hover:bg-gray-800'
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-        }`}
+        className={`w-full mt-4 px-4 py-3 rounded-lg transition-all flex items-center justify-center gap-2 text-sm font-medium text-white ${colorScheme.button} shadow-md hover:shadow-lg`}
       >
         <span>View Details & Pricing</span>
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -782,7 +897,7 @@ function ServiceCard({ service, openModal, variant = 'normal' }) {
 }
 
 // Service Modal Component
-function ServiceModal({ service, closeModal }) {
+function ServiceModal({ service, closeModal, colorScheme }) {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => {
@@ -790,32 +905,44 @@ function ServiceModal({ service, closeModal }) {
     };
   }, []);
 
+  // Handle escape key press
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [closeModal]);
+
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
+        className="fixed inset-0 bg-black bg-opacity-50 transition-opacity backdrop-blur-sm"
         onClick={closeModal}
       ></div>
 
       {/* Modal Container */}
       <div className="flex min-h-full items-center justify-center p-4">
         {/* Modal Content */}
-        <div className="relative bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="relative bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto animate-fadeIn">
           
-          {/* Modal Header */}
-          <div className="sticky top-0 bg-white border-b border-gray-100 px-8 py-6 flex justify-between items-start">
+          {/* Modal Header with gradient */}
+          <div className={`sticky top-0 ${colorScheme.header} px-8 py-6 flex justify-between items-start text-white`}>
             <div>
-              <span className="text-sm font-medium text-gray-500 uppercase tracking-wider">
+              <span className="text-sm font-medium text-white text-opacity-90 uppercase tracking-wider">
                 {service.categoryName}
               </span>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">
+              <h2 className="text-2xl font-bold mt-1">
                 {service.title}
               </h2>
             </div>
             <button
               onClick={closeModal}
-              className="text-gray-400 hover:text-gray-600 transition-colors p-2 hover:bg-gray-100 rounded-full"
+              className="text-white hover:text-white text-opacity-80 transition-colors p-2 hover:bg-white hover:bg-opacity-10 rounded-full"
+              aria-label="Close modal"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -828,7 +955,7 @@ function ServiceModal({ service, closeModal }) {
             {/* Description Section */}
             <div className="mb-8">
               <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" style={{ color: `var(--${colorScheme.accent}-600)` }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 Service Description
@@ -839,9 +966,9 @@ function ServiceModal({ service, closeModal }) {
             </div>
 
             {/* Timeline */}
-            <div className="mb-8 bg-gray-50 rounded-xl p-5">
+            <div className="mb-8 rounded-xl p-5" style={{ backgroundColor: `var(--${colorScheme.accent}-50)` }}>
               <div className="flex items-center gap-3">
-                <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6" style={{ color: `var(--${colorScheme.accent}-600)` }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <div>
@@ -855,7 +982,7 @@ function ServiceModal({ service, closeModal }) {
             {service.notes && (
               <div className="mb-8 bg-blue-50 border border-blue-100 rounded-xl p-5">
                 <h3 className="text-sm font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                  <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   Important Information
@@ -867,7 +994,7 @@ function ServiceModal({ service, closeModal }) {
             {/* Pricing Table */}
             <div className="mb-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" style={{ color: `var(--${colorScheme.accent}-600)` }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 Pricing Structure
@@ -891,10 +1018,12 @@ function ServiceModal({ service, closeModal }) {
                         <td className="px-6 py-4 text-sm text-gray-900">
                           {charge.item}
                         </td>
-                        <td className="px-6 py-4 text-sm text-gray-900 text-right font-medium">
-                          {charge.amount.includes('Depends') || charge.amount.includes('Varies') 
-                            ? charge.amount 
-                            : `KES ${charge.amount}`}
+                        <td className="px-6 py-4 text-sm text-right font-medium">
+                          <span style={{ color: `var(--${colorScheme.accent}-600)` }}>
+                            {charge.amount.includes('Depends') || charge.amount.includes('Varies') 
+                              ? charge.amount 
+                              : `KES ${charge.amount}`}
+                          </span>
                         </td>
                       </tr>
                     ))}
@@ -906,60 +1035,30 @@ function ServiceModal({ service, closeModal }) {
             {/* Application Steps */}
             <div className="mt-8 pt-6 border-t border-gray-100">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" style={{ color: `var(--${colorScheme.accent}-600)` }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 How to Apply
               </h3>
               
               <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 font-semibold">
-                    1
+                {[
+                  { step: 1, title: "Contact Us", description: `Reach out via phone at +254 724 210375 or email info@zesscointernational.com` },
+                  { step: 2, title: "Submit Required Documents", description: "Provide all necessary documentation as per our checklist" },
+                  { step: 3, title: "Make Payment", description: "Process payment via M-PESA Paybill or Bank Transfer" },
+                  { step: 4, title: "Service Delivery", description: `Receive completed service within ${service.timeline}` }
+                ].map((item) => (
+                  <div key={item.step} className="flex items-start gap-4">
+                    <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-semibold text-white`}
+                         style={{ backgroundColor: `var(--${colorScheme.accent}-600)` }}>
+                      {item.step}
+                    </div>
+                    <div className="flex-grow">
+                      <p className="text-gray-800 font-medium">{item.title}</p>
+                      <p className="text-sm text-gray-600 mt-1">{item.description}</p>
+                    </div>
                   </div>
-                  <div className="flex-grow">
-                    <p className="text-gray-800 font-medium">Contact Us</p>
-                    <p className="text-sm text-gray-600 mt-1">
-                      Reach out via phone at <span className="font-semibold">+254 724 210375</span> or email <span className="font-semibold">info@zesscointernational.com</span>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 font-semibold">
-                    2
-                  </div>
-                  <div className="flex-grow">
-                    <p className="text-gray-800 font-medium">Submit Required Documents</p>
-                    <p className="text-sm text-gray-600 mt-1">
-                      Provide all necessary documentation as per our checklist
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 font-semibold">
-                    3
-                  </div>
-                  <div className="flex-grow">
-                    <p className="text-gray-800 font-medium">Make Payment</p>
-                    <p className="text-sm text-gray-600 mt-1">
-                      Process payment via M-PESA Paybill or Bank Transfer
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 font-semibold">
-                    4
-                  </div>
-                  <div className="flex-grow">
-                    <p className="text-gray-800 font-medium">Service Delivery</p>
-                    <p className="text-sm text-gray-600 mt-1">
-                      Receive completed service within {service.timeline}
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -975,8 +1074,8 @@ function ServiceModal({ service, closeModal }) {
               </button>
               <a
                 href="tel:+254724210375"
-                className="px-6 py-2.5 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium inline-flex items-center justify-center gap-2"
-              
+                className={`px-6 py-2.5 text-white rounded-lg transition-colors font-medium inline-flex items-center justify-center gap-2 ${colorScheme.button}`}
+              >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
@@ -986,6 +1085,22 @@ function ServiceModal({ service, closeModal }) {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.3s ease-out;
+        }
+      `}</style>
     </div>
   );
 }

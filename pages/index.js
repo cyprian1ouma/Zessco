@@ -88,7 +88,7 @@ export default function Home() {
             <Link href="/tender" className="bg-blue-900 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-blue-800 transition font-semibold text-sm sm:text-base">
               Start Your Tender Now
             </Link>
-            <Link href="/eligibility" className="bg-orange-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-orange-600 transition font-semibold text-sm sm:text-base">
+            <Link href="/documents/catalogue.pdf" className="bg-orange-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-orange-600 transition font-semibold text-sm sm:text-base">
                View our catalogue
             </Link>
           </div>

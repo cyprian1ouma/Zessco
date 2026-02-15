@@ -423,11 +423,24 @@ export default function ServicesPage() {
           </div>
         </div>
 
+         {/* Introductory part */}
+         <section className="bg-gray-50 py-16">
+          <div className="max-w-4xl mx-auto text-center px-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-500 mb-4">
+              E.G.P Tenders and More
+            </h1>
+            <p className="text-gray-600 sm:text-lg md:text-xl">
+              Your trusted partner for tenders, business solutions, and consultancy services.
+            </p>
+            <div className="mt-6 w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+          </div>
+        </section>
+
+
         {/* Services Section */}
-        <div className="max-w-7xl mx-auto relative z-10">
-          
+        <div className="max-w-1xl mx-2px relative z-10">
           {/* Civil Engineering Section - Updated text only */}
-          <section className="mt-12 sm:mt-20 relative">
+          <section className="mt-2 sm:mt-2 relative">
             <div className="text-center mb-10">
               <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
                 Civil Engineering Tender Services
