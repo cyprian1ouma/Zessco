@@ -862,7 +862,7 @@ function ServiceCard({ service, openModal, colorScheme }) {
         </div>
         <h2 className="text-lg font-semibold text-gray-900 mt-2 mb-3 line-clamp-2">
           {service.title}
-        </h2>
+        </h2> 
         <p className="text-gray-600 text-sm line-clamp-3 mb-4">
           {service.description}
         </p>
