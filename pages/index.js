@@ -69,7 +69,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="bg-white shadow-md p-3 sm:p-6 rounded transition duration-500 hover:bg-orange-500 hover:text-white hover:scale-105 text-sm sm:text-lg font-semibold">
-            Call: +254 724 210375
+            Call: +254 724 210375 / +254 725 798258
           </div>
         </section>
 

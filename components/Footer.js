@@ -79,7 +79,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start text-white">
                 <FaPhone className="text-lg mt-0.5 flex-shrink-0" />
-                <span className="ml-2 text-sm sm:text-base">+254 724 210375</span>
+                <span className="ml-1 text-sm sm:text-base">+254 724 210375 / +254 725 798258</span>
               </li>
             </ul>
           </div>

@@ -166,6 +166,7 @@ export default function Services() {
       title: "Private Limited Company", 
       description: "We help you register your Limited company between 24 hrs. The package includes: Registration Cert, CR12, CR1, CR2, CR8, Statement of Nominal Capital, Beneficial Ownership Declaration.",
       charges: [
+        { item: "Normal:2 ", amount: "20,000" },
         { item: "0 to 1M", amount: "7,000" },
         { item: "1M to 5M", amount: "10,000" },
         { item: "5M to 10M", amount: "15,000" },
@@ -204,6 +205,7 @@ export default function Services() {
       title: "NCA Registration", 
       description: "Let's facilitate your NCA registration.",
       charges: [
+        { item: "Startting From:", amount: "5,000" },
         { item: "NCA 1", amount: "200,000" },
         { item: "NCA 2", amount: "150,000" },
         { item: "NCA 3", amount: "80,000" },
@@ -858,7 +860,7 @@ function ServiceCard({ service, openModal, colorScheme }) {
         <div className={`inline-block px-3 py-1 ${colorScheme.header} text-white text-xs font-medium rounded-full mb-3 shadow-sm`}>
           {service.categoryName}
         </div>
-        <h2 className="text-xl font-semibold text-gray-900 mt-2 mb-3 line-clamp-2">
+        <h2 className="text-lg font-semibold text-gray-900 mt-2 mb-3 line-clamp-2">
           {service.title}
         </h2>
         <p className="text-gray-600 text-sm line-clamp-3 mb-4">
